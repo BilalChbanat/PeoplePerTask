@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/yassirelkhaili/PeoplePerTask#readme",
   "devDependencies": {
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2"
   }
 }
