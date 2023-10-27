@@ -1,7 +1,7 @@
 # PeoplePerTask
 Welcome to People Per Task, your go-to destination for freelance talent! Our GitHub repository is where we collaborate on building and improving our cutting-edge freelance marketplace. Join us in shaping the future of remote work by contributing to our open-source project.🌐💼🚀
 
-# How to contribute to this codebase
+# How to contribute to this codebase (by yours trully yassir elk)
 1. fork the remote repository
 2. clone the repository 
 3. cd peoplepertask
