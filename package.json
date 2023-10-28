@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run tailwind:build && tsc --watch",
-    "tailwind:build": "npx tailwindcss -i ./global.css -o ./dist/output.css"
+    "start": "concurrently \"npm:tailwind:watch\" \"tsc --watch\"",
+    "tailwind:watch": "npx tailwindcss -i ./global.css -o ./dist/output.css -w"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/yassirelkhaili/PeoplePerTask#readme",
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
   }
