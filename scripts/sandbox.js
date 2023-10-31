@@ -42,13 +42,16 @@ const toggleThemeDropdown = () => {
         setTimeout(() => {
             dropDown.classList.add("opacity-100");
         }, 1);
+        setTimeout(() => {
+            dropDown.classList.remove("opacity-0");
+        }, 1);
     }
     else {
-        console.log("accessed");
         dropDown.classList.remove("opacity-100");
+        dropDown.classList.add("opacity-0");
         setTimeout(() => {
             dropDown.classList.add("hidden");
-        }, 300);
+        }, 200);
     }
 };
 //close dropdown on outside click
