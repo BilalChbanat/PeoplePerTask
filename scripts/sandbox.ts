@@ -43,11 +43,15 @@ if (dropDown.classList.contains("hidden")) {
     setTimeout(() => {
         dropDown.classList.add("opacity-100");
     }, 1);
+   setTimeout(() => {
+     dropDown.classList.remove("opacity-0");
+   }, 1);
 } else {
     dropDown.classList.remove("opacity-100");
+        dropDown.classList.add("opacity-0");
     setTimeout(() => {
         dropDown.classList.add("hidden");
-    }, 300);
+    }, 200);
 }
 }
 
