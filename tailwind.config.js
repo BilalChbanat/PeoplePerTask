@@ -1,12 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./{,src/**/}*.{html,js}"],
+  content: ["./**/*.html"],
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
+        mainColor: "#111827",
         cardGrey: '#161E2D',
         textGrey: '#8E95A1'
+      },
+      fontFamily: {
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif']
+        },
       }
     },
   },
