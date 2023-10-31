@@ -75,8 +75,7 @@ const handleThemeSwitchBtnClick = (index: number) => {
 }
 
 if (dropDown) {
-    for (const [index, child] of [...dropDown.children].entries()) {
-        child.addEventListener("click", handleThemeSwitchBtnClick.bind(null, index));
-    }    
+    for (const [index, child] of [...dropDown.children].entries())
+        child.addEventListener("click", handleThemeSwitchBtnClick.bind(null, index));  
 }
 
