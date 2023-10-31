@@ -6,16 +6,20 @@ const themeToggleBtn = document.getElementById('theme-toggle');
 const dropDown = document.querySelector("#selectThemeDropdown");
 //handle theme switch
 const toggleLightTheme = () => {
-    document.documentElement.classList.add("light");
+    document.documentElement.classList.remove("dark");
     themeToggleDarkIcon.classList.remove('hidden');
+    themeToggleLightIcon.classList.add('hidden');
     localStorage.setItem("color-theme", "light");
 };
 const toggleDarkTheme = () => {
     document.documentElement.classList.add("dark");
     themeToggleLightIcon.classList.remove('hidden');
+    themeToggleDarkIcon.classList.add("hidden");
     localStorage.setItem("color-theme", "dark");
 };
 const handleThemeSwitch = () => {
+    const rootClasses = ["transition", "duration-100"];
+    rootClasses.forEach((rootClass) => document.documentElement.classList.add(rootClass));
     if (!('color-theme' in localStorage)) {
         toggleLightTheme();
     }
@@ -32,7 +36,7 @@ const handleThemeSwitch = () => {
 //toggle default theme
 document.addEventListener("DOMContentLoaded", handleThemeSwitch);
 //handle dropdownMenu toggle
-const handleThemeToggle = () => {
+const toggleThemeDropdown = () => {
     if (dropDown.classList.contains("hidden")) {
         dropDown.classList.remove("hidden");
         setTimeout(() => {
@@ -46,14 +50,29 @@ const handleThemeToggle = () => {
         }, 300);
     }
 };
+//close dropdown on outside click
 const handleOutsideClick = (element, event) => {
     const target = event.target;
     if (target !== dropDown && !element.contains(target) && element.classList.contains("opacity-100"))
-        handleThemeToggle();
+        toggleThemeDropdown();
 };
 window.addEventListener("click", handleOutsideClick.bind(null, dropDown));
-themeToggleBtn && themeToggleBtn.addEventListener("click", handleThemeToggle);
+themeToggleBtn && themeToggleBtn.addEventListener("click", toggleThemeDropdown);
+//toggle theme
+const handleThemeSwitchBtnClick = (index) => {
+    if (index === 0) {
+        window.matchMedia('(prefers-color-scheme: dark)').matches ? toggleDarkTheme() : toggleLightTheme();
+        localStorage.setItem("color-theme", "auto");
+    }
+    else if (index === 1) {
+        toggleLightTheme();
+    }
+    else {
+        toggleDarkTheme();
+    }
+};
 if (dropDown) {
-    for (let child of dropDown.children) {
+    for (const [index, child] of [...dropDown.children].entries()) {
+        child.addEventListener("click", handleThemeSwitchBtnClick.bind(null, index));
     }
 }

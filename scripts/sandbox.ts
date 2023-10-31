@@ -6,18 +6,22 @@ const dropDown = document.querySelector("#selectThemeDropdown") as HTMLDivElemen
 
 //handle theme switch
 const toggleLightTheme = (): void => {
-    document.documentElement.classList.add("light");
+    document.documentElement.classList.remove("dark");
     themeToggleDarkIcon.classList.remove('hidden');
+    themeToggleLightIcon.classList.add('hidden');
     localStorage.setItem("color-theme", "light");
 }
 
-const toggleDarkTheme = ():void => {
+const toggleDarkTheme = (): void => {
     document.documentElement.classList.add("dark");
     themeToggleLightIcon.classList.remove('hidden');
+    themeToggleDarkIcon.classList.add("hidden");
     localStorage.setItem("color-theme", "dark");
 }
 
 const handleThemeSwitch = () => {
+    const rootClasses: Array<string> = ["transition", "duration-100"];
+    rootClasses.forEach((rootClass: string) => document.documentElement.classList.add(rootClass));
     if (!('color-theme' in localStorage)) {
         toggleLightTheme();
     } else if (localStorage.getItem("color-theme") === "auto") {
@@ -33,7 +37,7 @@ const handleThemeSwitch = () => {
 document.addEventListener("DOMContentLoaded", handleThemeSwitch);
 
 //handle dropdownMenu toggle
-const handleThemeToggle = (): void => {
+const toggleThemeDropdown = (): void => {
 if (dropDown.classList.contains("hidden")) {
     dropDown.classList.remove("hidden");
     setTimeout(() => {
@@ -47,18 +51,32 @@ if (dropDown.classList.contains("hidden")) {
 }
 }
 
+//close dropdown on outside click
 const handleOutsideClick = (element: HTMLElement, event: Event) => {
     const target = event.target as HTMLElement;
     if (target !== dropDown && !element.contains(target) && element.classList.contains("opacity-100")) 
-        handleThemeToggle();
+        toggleThemeDropdown();
 }
 
 window.addEventListener("click", handleOutsideClick.bind(null, dropDown))
 
-themeToggleBtn && themeToggleBtn.addEventListener("click", handleThemeToggle);
+themeToggleBtn && themeToggleBtn.addEventListener("click", toggleThemeDropdown);
 
-if (dropDown) {
-    for (let child of dropDown.children) {
-
+//toggle theme
+const handleThemeSwitchBtnClick = (index: number) => {
+    if (index === 0) {
+        window.matchMedia('(prefers-color-scheme: dark)').matches ? toggleDarkTheme() : toggleLightTheme();
+        localStorage.setItem("color-theme", "auto");
+    } else if (index === 1) {
+        toggleLightTheme();
+    } else {
+        toggleDarkTheme();
     }
 }
+
+if (dropDown) {
+    for (const [index, child] of [...dropDown.children].entries()) {
+        child.addEventListener("click", handleThemeSwitchBtnClick.bind(null, index));
+    }    
+}
+
