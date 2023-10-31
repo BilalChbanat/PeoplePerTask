@@ -44,7 +44,6 @@ if (dropDown.classList.contains("hidden")) {
         dropDown.classList.add("opacity-100");
     }, 1);
 } else {
-    console.log("accessed")
     dropDown.classList.remove("opacity-100");
     setTimeout(() => {
         dropDown.classList.add("hidden");
