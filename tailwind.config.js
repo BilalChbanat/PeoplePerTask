@@ -17,8 +17,12 @@ module.exports = {
       fontFamily: {
           'poppins': ['Poppins', 'sans-serif'],
         },
+        fredoka: {
+          'fredoka': ['Fredoka', 'sans-serif'],
+        },
     },
   },
   plugins: [],
 }
+
 
