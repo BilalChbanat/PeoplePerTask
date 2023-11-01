@@ -17,6 +17,7 @@ const toggleDarkTheme = () => {
     themeToggleDarkIcon.classList.add("hidden");
     localStorage.setItem("color-theme", "dark");
 };
+//toggle default theme
 const handleThemeSwitch = () => {
     const rootClasses = ["transition", "duration-100"];
     rootClasses.forEach((rootClass) => document.documentElement.classList.add(rootClass));
@@ -33,7 +34,6 @@ const handleThemeSwitch = () => {
         toggleLightTheme();
     }
 };
-//toggle default theme
 document.addEventListener("DOMContentLoaded", handleThemeSwitch);
 //handle dropdownMenu toggle
 const toggleThemeDropdown = () => {
@@ -41,19 +41,24 @@ const toggleThemeDropdown = () => {
         dropDown.classList.remove("hidden");
         setTimeout(() => {
             dropDown.classList.add("opacity-100");
+            dropDown.classList.add("translate-y-0");
         }, 1);
         setTimeout(() => {
             dropDown.classList.remove("opacity-0");
-        }, 1);
+            dropDown.classList.remove("translate-y-3");
+        }, 99);
     }
     else {
         dropDown.classList.remove("opacity-100");
+        dropDown.classList.remove("translate-y-0");
         dropDown.classList.add("opacity-0");
+        dropDown.classList.add("translate-y-3");
         setTimeout(() => {
             dropDown.classList.add("hidden");
         }, 200);
     }
 };
+themeToggleBtn && themeToggleBtn.addEventListener("click", toggleThemeDropdown);
 //close dropdown on outside click
 const handleOutsideClick = (element, event) => {
     const target = event.target;
@@ -61,7 +66,6 @@ const handleOutsideClick = (element, event) => {
         toggleThemeDropdown();
 };
 window.addEventListener("click", handleOutsideClick.bind(null, dropDown));
-themeToggleBtn && themeToggleBtn.addEventListener("click", toggleThemeDropdown);
 //toggle theme
 const handleThemeSwitchBtnClick = (index) => {
     if (index === 0) {
@@ -74,6 +78,7 @@ const handleThemeSwitchBtnClick = (index) => {
     else {
         toggleDarkTheme();
     }
+    toggleThemeDropdown();
 };
 if (dropDown) {
     for (const [index, child] of [...dropDown.children].entries())
