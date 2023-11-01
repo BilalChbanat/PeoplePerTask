@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.html"],
-
   darkMode: 'class',
   theme: {
     extend: {
@@ -14,17 +13,16 @@ module.exports = {
         cardGrey: '#161E2D',
         textGrey: '#8E95A1',
         seperator: '#3F444E'
-
       },
-        fontFamily: {
-          poppins: ['Poppins', 'sans-serif'],
+      fontFamily: {
+          'poppins': ['Poppins', 'sans-serif'],
         },
         fredoka: {
-          fredoka: ['Fredoka', 'sans-serif'],
+          'fredoka': ['Fredoka', 'sans-serif'],
         },
-
     },
   },
   plugins: [],
 }
+
 

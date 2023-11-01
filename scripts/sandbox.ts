@@ -19,6 +19,7 @@ const toggleDarkTheme = (): void => {
     localStorage.setItem("color-theme", "dark");
 }
 
+//toggle default theme
 const handleThemeSwitch = () => {
     const rootClasses: Array<string> = ["transition", "duration-100"];
     rootClasses.forEach((rootClass: string) => document.documentElement.classList.add(rootClass));
@@ -33,7 +34,6 @@ const handleThemeSwitch = () => {
     }
 }
 
-//toggle default theme
 document.addEventListener("DOMContentLoaded", handleThemeSwitch);
 
 //handle dropdownMenu toggle
@@ -42,18 +42,24 @@ if (dropDown.classList.contains("hidden")) {
     dropDown.classList.remove("hidden");
     setTimeout(() => {
         dropDown.classList.add("opacity-100");
+        dropDown.classList.add("translate-y-0");
     }, 1);
    setTimeout(() => {
      dropDown.classList.remove("opacity-0");
-   }, 1);
+     dropDown.classList.remove("translate-y-3");
+   }, 99);
 } else {
     dropDown.classList.remove("opacity-100");
-        dropDown.classList.add("opacity-0");
+    dropDown.classList.remove("translate-y-0");
+    dropDown.classList.add("opacity-0");
+    dropDown.classList.add("translate-y-3")
     setTimeout(() => {
         dropDown.classList.add("hidden");
     }, 200);
 }
 }
+
+themeToggleBtn && themeToggleBtn.addEventListener("click", toggleThemeDropdown);
 
 //close dropdown on outside click
 const handleOutsideClick = (element: HTMLElement, event: Event) => {
@@ -63,8 +69,6 @@ const handleOutsideClick = (element: HTMLElement, event: Event) => {
 }
 
 window.addEventListener("click", handleOutsideClick.bind(null, dropDown))
-
-themeToggleBtn && themeToggleBtn.addEventListener("click", toggleThemeDropdown);
 
 //toggle theme
 const handleThemeSwitchBtnClick = (index: number) => {
@@ -76,6 +80,7 @@ const handleThemeSwitchBtnClick = (index: number) => {
     } else {
         toggleDarkTheme();
     }
+    toggleThemeDropdown();
 }
 
 if (dropDown) {
