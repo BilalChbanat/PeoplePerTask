@@ -4,6 +4,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens:{
+      
+
+      },
       colors: {
         mainColorDark: "#111827",
         mainPurple: "#9F7AEA",
@@ -12,14 +16,16 @@ module.exports = {
         loginBtnBg: "#F0EEFF",
         cardGrey: '#161E2D',
         textGrey: '#8E95A1',
-        seperator: '#3F444E'
+        seperator: '#3F444E',
+        darkGrey: '#A9A9A9',
       },
       fontFamily: {
           'poppins': ['Poppins', 'sans-serif'],
-        },
-        fredoka: {
           'fredoka': ['Fredoka', 'sans-serif'],
-        },
+      },
+      backgroundImage: {
+        'bg1-image': "url('../images/bg.png')",
+      },
     },
   },
   plugins: [],
