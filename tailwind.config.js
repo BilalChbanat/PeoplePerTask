@@ -13,6 +13,7 @@ module.exports = {
         cardGrey: '#161E2D',
         textGrey: '#8E95A1',
         seperator: '#3F444E'
+        
       },
       fontFamily: {
           'poppins': ['Poppins', 'sans-serif'],
