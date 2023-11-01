@@ -7,14 +7,14 @@ const dropDown = document.querySelector("#selectThemeDropdown");
 //handle theme switch
 const toggleLightTheme = () => {
     document.documentElement.classList.remove("dark");
-    themeToggleDarkIcon.classList.remove('hidden');
-    themeToggleLightIcon.classList.add('hidden');
+    themeToggleLightIcon.classList.remove('hidden');
+    themeToggleDarkIcon.classList.add('hidden');
     localStorage.setItem("color-theme", "light");
 };
 const toggleDarkTheme = () => {
     document.documentElement.classList.add("dark");
-    themeToggleLightIcon.classList.remove('hidden');
-    themeToggleDarkIcon.classList.add("hidden");
+    themeToggleDarkIcon.classList.remove('hidden');
+    themeToggleLightIcon.classList.add("hidden");
     localStorage.setItem("color-theme", "dark");
 };
 //toggle default theme

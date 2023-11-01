@@ -4,6 +4,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        'hf': "1410px",
+      },
       colors: {
         mainColorDark: "#111827",
         mainPurple: "#9F7AEA",
