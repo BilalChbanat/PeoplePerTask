@@ -10,62 +10,112 @@
 </head>
 
 <body>
-    <section class="flex p-16 w-full">
-        <div class="w-2/4 flex flex-col justify-center">
-            <h1 class="text-6xl font-bold">Welcome to <span class="text-bluepeople">PeoplePerTask</span>
-                Your Gateway to <span class="text-bluepeople">Freelance
-                    Excellence</span></h1>
-            <div>
-                <p class="pt-10 text-xl">
-                    At People per Task, we're driven by a passion for delivering top-notch freelance work. We understand
-                    the
-                    challenges
-                    businesses and entrepreneurs face when seeking independent talent for their projects. That's why
-                    we're
-                    dedicated to
-                    simplifying the process for you.
-                    Feel free to personalize this text according to the values, services, and mission of your
-                    "PeoplePerTask" company.</p>
+    <header>
+        <header>
+            <nav class="border-b-seperator h-20 flex dark:bg-mainColorDark bg-slate-50">
+                <ul class="flex px-16 justify-between items-center w-full">
+                    <li>
+                        <img src="../images/main-logo.svg" alt="main-logo">
+                    </li>
+                    <li>
+                        <ul class="flex justify-center items-center gap-4">
+                            <li><a href="#"
+                                    class="dark:text-mainPurple text-mainBlue font-poppins font-normal text-base border-b-mainBlue dark:border-b-mainPurple border-b-[3px] py-[0.6rem]">Home</a>
+                            </li>
+                            <li><a href="#"
+                                    class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">Become
+                                    a member</a></li>
+                            <li><a href="#"
+                                    class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">About
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">Contact
+                                    Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="flex justify-center items-center gap-4">
+                            <li><input type="text"
+                                    class="shadow-sm dark:shadow-none bg-slate-50 rounded-full py-2 px-6 w-[18rem] p-1 border-none outline-none"
+                                    placeholder="Search Here..."></li>
+                            <li><button type="button"
+                                    class="text-defaultText rounded-full bg-loginBtnBg py-2 px-8 flex justify-center items-center font-poppins text-base font-medium">Log
+                                    In</button></li>
+                            <li><button type="button"
+                                    class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium">Sign
+                                    Up</button></li>
+                            <li>
+                                <div id="theme-switcher" class="relative">
+                                    <div id="selectThemeDropdown"
+                                        class="transform translate-y-3 hidden right-[-50px] min-w-[11rem] top-[2.5rem] mt-2 z-10 opacity-0 transition duration-200 mb-2 origin-bottom-left bg-white shadow-md rounded-lg p-2 space-y-1 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 absolute">
+                                        <a
+                                            class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer">
+                                            Auto (system default)
+                                        </a>
+                                        <a
+                                            class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer">
+                                            Default (light mode)
+                                        </a>
+                                        <a
+                                            class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer">
+                                            Dark
+                                        </a>
+                                    </div>
+                                </div>
+                                <button id="theme-toggle" type="button"
+                                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
+                                        </path>
+                                    </svg>
+                                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </header>
+    <main>
+        <section class="flex p-16 w-full">
+            <div class="w-2/4 flex flex-col justify-center">
+                <h1 class="text-6xl font-bold">Welcome to <span class="text-bluepeople">PeoplePerTask</span>
+                    Your Gateway to <span class="text-bluepeople">Freelance
+                        Excellence</span></h1>
+                <div>
+                    <p class="pt-10 text-xl">
+                        At People per Task, we're driven by a passion for delivering top-notch freelance work. We
+                        understand
+                        the
+                        challenges
+                        businesses and entrepreneurs face when seeking independent talent for their projects. That's why
+                        we're
+                        dedicated to
+                        simplifying the process for you.
+                        Feel free to personalize this text according to the values, services, and mission of your
+                        "PeoplePerTask" company.</p>
+                </div>
             </div>
-        </div>
-        <div class="w-2/4">
-            <img src="../svg/about_main_section_pic.svg" alt="aboutUs">
+            <div class="w-2/4">
+                <img src="../svg/about_main_section_pic.svg" alt="aboutUs">
 
-        </div>
-    </section>
-    <section class="px-16 flex flex-col justify-evenly text-center h-screen">
-        <div>
-            <h2 class="text-3xl font-bold">Why choose us</h2>
-            <p>It's very important to have a customer service, but it's just the way it is</p>
-            <p>tempor incididunt ut labore et dolore magna aliqua</p>
-        </div>
-        <div class="flex justify-evenly">
-            <div
-                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <img class="w-15" src="../svg/orange.svg" alt="trusted">
-                <h3 class="font-semibold text-xl">Trusted</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div
-                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <img src="../svg/purple.svg" alt="easy to use">
-                <h3 class="font-semibold text-xl">Easy to Use</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div
-                class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <img src="../svg/blue.svg" alt="faster">
-                <h3 class="font-semibold text-xl">Faster</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+        <section class="px-16">
+
+        </section>
+    </main>
+    <footer>
+        <script type="module" src="../scripts/sandbox.js"></script>
+    </footer>
 </body>
 
 </html>
