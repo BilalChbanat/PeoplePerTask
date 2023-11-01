@@ -5,7 +5,9 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'hf': "1410px",
+        'hf': "1420px",
+        'hs': "1045px",
+        'ht': "755px"
       },
       colors: {
         mainColorDark: "#111827",

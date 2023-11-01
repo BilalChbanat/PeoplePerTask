@@ -4,18 +4,37 @@ const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 const themeToggleBtn = document.getElementById('theme-toggle');
 const dropDown = document.querySelector("#selectThemeDropdown");
+let currenTheme = "";
 //handle theme switch
 const toggleLightTheme = () => {
     document.documentElement.classList.remove("dark");
     themeToggleLightIcon.classList.remove('hidden');
     themeToggleDarkIcon.classList.add('hidden');
     localStorage.setItem("color-theme", "light");
+    currenTheme = "light";
 };
 const toggleDarkTheme = () => {
     document.documentElement.classList.add("dark");
     themeToggleDarkIcon.classList.remove('hidden');
     themeToggleLightIcon.classList.add("hidden");
     localStorage.setItem("color-theme", "dark");
+    currenTheme = "dark";
+};
+//toggle burger icon
+const toggleBurgerIcon = () => {
+    const burgerMenus = document.querySelectorAll(".burgerMenu");
+    burgerMenus.forEach((burgerMenu) => {
+        const lightIcon = burgerMenu.querySelector("#burger-menu-dark");
+        const darkIcon = burgerMenu.querySelector("#burger-menu-light");
+        if (currenTheme === "dark") {
+            lightIcon.classList.remove("hidden");
+            darkIcon.classList.add("hidden");
+        }
+        else {
+            darkIcon.classList.remove("hidden");
+            lightIcon.classList.add("hidden");
+        }
+    });
 };
 //toggle default theme
 const handleThemeSwitch = () => {
@@ -23,16 +42,20 @@ const handleThemeSwitch = () => {
     rootClasses.forEach((rootClass) => document.documentElement.classList.add(rootClass));
     if (!('color-theme' in localStorage)) {
         toggleLightTheme();
+        currenTheme = "light";
     }
     else if (localStorage.getItem("color-theme") === "auto") {
         window.matchMedia('(prefers-color-scheme: dark)').matches ? toggleDarkTheme() : toggleLightTheme();
     }
     else if (localStorage.getItem('color-theme') === 'dark') {
         toggleDarkTheme();
+        currenTheme = "dark";
     }
     else {
         toggleLightTheme();
+        currenTheme = "light";
     }
+    toggleBurgerIcon();
 };
 document.addEventListener("DOMContentLoaded", handleThemeSwitch);
 //handle dropdownMenu toggle
@@ -79,6 +102,7 @@ const handleThemeSwitchBtnClick = (index) => {
         toggleDarkTheme();
     }
     toggleThemeDropdown();
+    toggleBurgerIcon();
 };
 if (dropDown) {
     for (const [index, child] of [...dropDown.children].entries())
