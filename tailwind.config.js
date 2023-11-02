@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.html"],
+  content: [
+    "./**/*.html",
+    "./scripts/*.js"
+  ],
   darkMode: 'class',
   theme: {
     extend: {
       screens: {
         'hf': "1420px",
-        'hs': "1045px",
+        'hs': {'min': '1050px', 'max': '1420px'},
         'ht': "755px"
       },
       colors: {
@@ -21,8 +24,6 @@ module.exports = {
       },
       fontFamily: {
           'poppins': ['Poppins', 'sans-serif'],
-        },
-        fredoka: {
           'fredoka': ['Fredoka', 'sans-serif'],
         },
     },

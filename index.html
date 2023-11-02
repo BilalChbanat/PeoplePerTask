@@ -30,7 +30,8 @@
             <ul class="flex justify-center items-center gap-4">
               <li>
                 <form class="relative hs:flex hidden">
-                  <input type="text" class="shadow-sm dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none" placeholder="Search Here...">
+                  <input type="text" class="shadow-[0px_4px_16px_0px_#00000014] placeholder:text-[#818181]
+                  dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none" placeholder="Search Here...">
                   <button type="submit" class="absolute z-10 top-[10px] right-5"><img src="./images/search-icon.svg" alt="search-icon"></button>
                 </form>
               </li>
@@ -69,21 +70,24 @@
         </ul>
        </nav>
        <!-- dropdown menu -->
-       <nav id="navDropdown" class="hf:hidden flex">
-        <ul class="flex px-16 justify-center items-center w-full flex-col gap-4">
+       <nav id="navDropdown" class="hf:hidden flex overflow-hidden hf:pb-0">
+        <ul
+          class="flex px-16 justify-center items-center w-full flex-col gap-4 transition-max-h duration-500 max-h-[0rem] ease-in-out"
+          id="navBurgerNav"
+        >      
           <li>
-            <ul class="justify-center items-center gap-4 hf:hidden flex flex-col">
+            <ul class="justify-center items-center gap-4 hf:hidden flex flex-col hs:pb-6">
               <li><a href="#" class="dark:text-mainPurple text-mainBlue font-poppins font-normal text-base border-b-mainBlue dark:border-b-mainPurple border-b-[3px] py-[0.6rem]">Home</a></li>
               <li><a href="#" class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">Become a member</a></li>
               <li><a href="#" class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">About Us</a></li>
               <li><a href="#" class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">Contact Us</a></li>
             </ul>
           </li>
-          <li>
+          <li class="hs:hidden flex">
             <ul class="flex justify-center items-center gap-4 flex-col">
               <li>
                 <form class="relative hs:hidden flex">
-                  <input type="text" class="shadow-sm dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none" placeholder="Search Here...">
+                  <input type="text" class="shadow-[0px_4px_16px_0px_#00000014] placeholder:text-[#818181] dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none" placeholder="Search Here...">
                   <button type="submit" class="absolute z-10 top-[10px] right-5"><img src="./images/search-icon.svg" alt="search-icon"></button>
                 </form>
               </li>
