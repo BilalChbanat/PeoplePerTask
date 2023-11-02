@@ -1,15 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.html"],
+  content: [
+    "./**/*.html",
+    "./scripts/*.js"
+  ],
   darkMode: 'class',
   theme: {
     extend: {
       screens: {
-        'hf': "1420px",
-        'hs': "1045px",
-        'ht': "755px"
+        'hero': "1030px",
+        'hf': "1430px",
+        'hs': "1070px",
+        'ht': "760px",
       },
       colors: {
+        cardGrey: '#161E2D',
+        textGrey: '#8E95A1',
         mainColorDark: "#111827",
         mainPurple: "#9F7AEA",
         mainBlue: "#6366F1",
@@ -19,17 +25,14 @@ module.exports = {
         textGrey: '#8E95A1',
         seperator: '#3F444E',
         darkGrey: '#A9A9A9',
+        seperator: '#3F444E'
       },
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
-        'fredoka': ['Fredoka', 'sans-serif'],
-      },
-      backgroundImage: {
-        'bg1-image': "url('../images/bg.png')",
-      },
+          'poppins': ['Poppins', 'sans-serif'],
+          'fredoka': ['Fredoka', 'sans-serif'],
+        },
     },
   },
   plugins: [],
 }
-
 

@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/output.css">
-    <link rel="stylesheet" href="./global.css">
     <title>PeoplePerTask</title>
 </head>
-<body>
-    <header class="dark:bg-mainColorDark bg-slate-50">
-       <nav class="border-b-seperator h-20 flex">
+<body class="dark:bg-mainColorDark bg-slate-50">
+    <header>
+       <nav class="h-20 flex hf:dark:border-b-[1px] hf:border-b-seperator">
         <ul class="flex px-16 justify-between items-center w-full">
           <li class="flex gap-1">
             <img src="./images/main-logo.svg" alt="main-logo">
@@ -30,7 +29,8 @@
             <ul class="flex justify-center items-center gap-4">
               <li>
                 <form class="relative hs:flex hidden">
-                  <input type="text" class="shadow-sm dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none" placeholder="Search Here...">
+                  <input type="text" class="shadow-[0px_4px_16px_0px_#00000014] placeholder:text-[#818181]
+                  dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none" placeholder="Search Here...">
                   <button type="submit" class="absolute z-10 top-[10px] right-5"><img src="./images/search-icon.svg" alt="search-icon"></button>
                 </form>
               </li>
@@ -69,21 +69,24 @@
         </ul>
        </nav>
        <!-- dropdown menu -->
-       <nav id="navDropdown" class="hf:hidden flex">
-        <ul class="flex px-16 justify-center items-center w-full flex-col gap-4">
+       <nav id="navDropdown" class="hf:hidden flex overflow-hidden hf:pb-0 dark:border-b-[1px] border-b-seperator">
+        <ul
+          class="flex px-16 justify-center items-center w-full flex-col gap-4 transition-max-h duration-500 max-h-[0rem] ease-in-out"
+          id="navBurgerNav"
+        >      
           <li>
-            <ul class="justify-center items-center gap-4 hf:hidden flex flex-col">
+            <ul class="justify-center items-center gap-4 hf:hidden flex flex-col hs:pb-6">
               <li><a href="#" class="dark:text-mainPurple text-mainBlue font-poppins font-normal text-base border-b-mainBlue dark:border-b-mainPurple border-b-[3px] py-[0.6rem]">Home</a></li>
               <li><a href="#" class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">Become a member</a></li>
               <li><a href="#" class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">About Us</a></li>
               <li><a href="#" class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">Contact Us</a></li>
             </ul>
           </li>
-          <li>
+          <li class="hs:hidden flex">
             <ul class="flex justify-center items-center gap-4 flex-col">
               <li>
                 <form class="relative hs:hidden flex">
-                  <input type="text" class="shadow-sm dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none" placeholder="Search Here...">
+                  <input type="text" class="shadow-[0px_4px_16px_0px_#00000014] placeholder:text-[#818181] dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none" placeholder="Search Here...">
                   <button type="submit" class="absolute z-10 top-[10px] right-5"><img src="./images/search-icon.svg" alt="search-icon"></button>
                 </form>
               </li>
@@ -116,7 +119,29 @@
         </ul>
        </nav>
     </header>
-    <main>
+    <main class="px-16">
+      <section class="flex justify-center items-center hero:flex-row flex-col py-0">
+        <div class="hs:w-[60%] flex justify-center items-start flex-col gap-6">
+         <div>
+          <h1 class="hs:text-[60px] text-[40px] font-poppins font-semibold text-defaultText dark:text-slate-50">
+            Unlock Your <span class="dark:text-mainPurple text-mainBlue">Freelance</span> Potential <span class="dark:text-mainPurple text-mainBlue">Today!</span>
+          </h1>
+          <p class="dark:text-textGrey text-defaultText">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae corporis eveniet a omnis odit aut culpa accusantium quibusdam.
+          </p>
+         </div>
+        <div class="flex justify-center items-center gap-6">
+          <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-[0.9rem] px-[2rem] flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-[full]">Discover Now</button>
+          <div class="flex justify-center items-center gap-4">
+            <button type="button" class="p-[0.9rem] aspect-square rounded-full dark:bg-slate-50 bg-white"><img src="./images/SVG.svg" alt="playbutton-svg"></button>
+            <p class="text-defaultText dark:text-textGrey">watch video</p>
+          </div>
+        </div>
+        </div>
+        <div>
+          <img src="./images/hero-image.svg" alt="hero-image">
+        </div>
+      </section>
     </main>
     <footer>
     </footer>
