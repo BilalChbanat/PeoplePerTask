@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'hf': "1420px",
-        'hs': "1050px",
-        'ht': "755px"
+        'hero': "1030px",
+        'hf': "1430px",
+        'hs': "1070px",
+        'ht': "760px",
       },
       colors: {
         mainColorDark: "#111827",
