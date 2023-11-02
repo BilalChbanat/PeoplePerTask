@@ -21,10 +21,12 @@ module.exports = {
       },
       fontFamily: {
           'poppins': ['Poppins', 'sans-serif'],
-        },
-        fredoka: {
           'fredoka': ['Fredoka', 'sans-serif'],
-        },
+      },
+      backgroundImage: {
+        'bg1-image': "url('../images/bg.png')",
+      }
+
     },
   },
   plugins: [],
