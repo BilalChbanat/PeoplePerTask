@@ -150,9 +150,6 @@ const handleBurgerMenuClick = () => {
   }
 };
 
-
-  
-
 burgerMenus.forEach((burgerMenu: HTMLDivElement) => {
     burgerMenu.addEventListener("click", handleBurgerMenuClick);
 })

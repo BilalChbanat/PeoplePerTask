@@ -16,6 +16,15 @@ module.exports = {
       colors: {
         cardGrey: '#161E2D',
         textGrey: '#8E95A1',
+        mainColorDark: "#111827",
+        mainPurple: "#9F7AEA",
+        mainBlue: "#6366F1",
+        defaultText: "#363848",
+        loginBtnBg: "#F0EEFF",
+        cardGrey: '#161E2D',
+        textGrey: '#8E95A1',
+        seperator: '#3F444E',
+        darkGrey: '#A9A9A9',
         seperator: '#3F444E'
       },
       fontFamily: {
