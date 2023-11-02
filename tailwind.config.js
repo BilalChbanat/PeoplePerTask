@@ -4,16 +4,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-<<<<<<< HEAD
-      screens:{
-      
-
-=======
       screens: {
         'hf': "1420px",
         'hs': "1045px",
         'ht': "755px"
->>>>>>> develop
       },
       colors: {
         mainColorDark: "#111827",
@@ -27,8 +21,8 @@ module.exports = {
         darkGrey: '#A9A9A9',
       },
       fontFamily: {
-          'poppins': ['Poppins', 'sans-serif'],
-          'fredoka': ['Fredoka', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+        'fredoka': ['Fredoka', 'sans-serif'],
       },
       backgroundImage: {
         'bg1-image': "url('../images/bg.png')",
