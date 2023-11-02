@@ -26,12 +26,7 @@ module.exports = {
       },
       backgroundImage: {
         'bg1-image': "url('../images/bg.png')",
-<<<<<<< HEAD
       },
-=======
-      }
-
->>>>>>> develop
     },
   },
   plugins: [],
