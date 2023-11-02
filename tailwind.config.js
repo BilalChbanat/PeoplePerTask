@@ -4,9 +4,16 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+<<<<<<< HEAD
       screens:{
       
 
+=======
+      screens: {
+        'hf': "1420px",
+        'hs': "1045px",
+        'ht': "755px"
+>>>>>>> develop
       },
       colors: {
         mainColorDark: "#111827",
@@ -25,7 +32,12 @@ module.exports = {
       },
       backgroundImage: {
         'bg1-image': "url('../images/bg.png')",
+<<<<<<< HEAD
       },
+=======
+      }
+
+>>>>>>> develop
     },
   },
   plugins: [],
