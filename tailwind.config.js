@@ -4,6 +4,11 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        'hf': "1420px",
+        'hs': "1045px",
+        'ht': "755px"
+      },
       colors: {
         mainColorDark: "#111827",
         mainPurple: "#9F7AEA",
@@ -17,10 +22,12 @@ module.exports = {
       },
       fontFamily: {
           'poppins': ['Poppins', 'sans-serif'],
-        },
-        fredoka: {
           'fredoka': ['Fredoka', 'sans-serif'],
-        },
+      },
+      backgroundImage: {
+        'bg1-image': "url('../images/bg.png')",
+      }
+
     },
   },
   plugins: [],

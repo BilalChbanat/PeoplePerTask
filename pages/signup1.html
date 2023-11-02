@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../dist/output.css">
   <title>PeoplePerTask</title>
+  <!-- font Fredoka -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+  <!-- RemixIcon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 <body class="w-full h-full bg-bg1-image bg-cover bg-center">
@@ -37,7 +41,8 @@
                 class="shadow-sm dark:shadow-none bg-slate-50 rounded-full py-2 px-6 w-[18rem] p-1 border-none outline-none"
                 placeholder="Search Here..."></li>
             <li><button type="button"
-                class="text-defaultText rounded-full bg-loginBtnBg py-2 px-8 flex justify-center items-center font-poppins text-base font-medium">Log In</button></li>
+                class="text-defaultText rounded-full bg-loginBtnBg py-2 px-8 flex justify-center items-center font-poppins text-base font-medium">Log
+                In</button></li>
             <li><button type="button"
                 class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium">Sign
                 Up</button></li>
@@ -81,52 +86,26 @@
   </header>
 
   <main>
-    <div
-      class=" max-w-2xl  mx-auto  my-12 bg-white p-8 pb-1 mt-16 rounded-xl shadow shadow-slate-200 drop-shadow-lg dark:bg-mainColorDark dark:shadow-slate-900 sm: w-full">
-      <h1 class="text-4xl text-center font-fredoka font-semibold dark:text-white">Log in to <span
-          class=" text-mainBlue dark:text-mainPurple">PeoplePerTask</span></h1>
+    <div class=" max-w-2xl  mx-auto h-fit my-12 bg-white px-8 py-4 pb-1 mt-16 rounded-xl shadow shadow-slate-200 drop-shadow-lg dark:bg-mainColorDark dark:shadow-slate-900 sm: w-full">
       <form action="" class="my-10">
         <div class="flex flex-col space-y-5">
-          <label for="email">
-            <input id="email" name="email" type="email"
-              class="w-full py-3 border-zinc-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:bg-cardGrey dark:focus:border-mainPurple "
-              placeholder="Enter email address">
-          </label>
-          <label for="password">
-            <input id="password" name="password" type="password"
-              class="w-full py-3 border-zinc-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:bg-cardGrey dark:focus:border-mainPurple"
-              placeholder="Enter your password">
-          </label>
-          <div class="flex flex-row justify-between items-center">
-            <div>
-              <label for="remember" class=" font-medium dark:text-white">
-                <input type="checkbox" id="remember" class="form-checkbox w-4 h-4 border-none ">
-                Remember me
-              </label>
-            </div>
-            <div>
-              <a href="#" class="font-normal text-sm text-zinc-500 dark:text-darkGrey">Forgot Password?</a>
-            </div>
-          </div>
-          <button
-            class="w-full py-3 font-medium text-white bg-mainBlue hover:bg-indigo-600 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center dark:bg-mainPurple dark:hover:bg-violet-500">
-            <span>Login</span>
-          </button>
-
-          <div class="flex justify-center items-center">
-            <span class="w-full border border-zinc-400"></span>
-            <span class="px-3 text-sm text-zinc-600 dark:text-darkGrey">Or</span>
-            <span class="w-full border border-zinc-400"></span>
+          <div class=" flex flex-row items-center gap-8">
+            <button class="flex flex-col items-center w-1/2 h-44 bg-white border-zinc-200 border-[0.1rem] p-8 pt-6 rounded-xl text-center font-bold text-xl text-mainBlue font-poppins dark:text-mainPurple  hover:text-white hover:bg-mainBlue hover:border-none  dark:hover:bg-mainPurple dark:hover:text-white dark:bg-cardGrey">
+              <i class="ri-user-3-line font-extralight text-3xl"></i>
+              <a href="">I’m a client, hiring<br>for a project</a>
+            </button>
+            <button class="flex flex-col items-center w-1/2 h-44 bg-white border-zinc-200 border-[0.1rem] p-8 pt-6 rounded-xl text-center font-bold text-xl text-mainBlue font-poppins hover:text-white dark:text-mainPurple hover:bg-mainBlue hover:border-none dark:hover:bg-mainPurple dark:hover:text-white dark:bg-cardGrey">
+              <i class="ri-briefcase-2-line font-extralight text-3xl"></i>
+              <a href="">I’m a freelancer, looking for work</a>
+            </button>
           </div>
 
-          <button
-            class="w-full py-3 font-medium text-black text-sm  bg-white border border-1 border-black rounded-full ">
+          <button class="w-full py-3 font-medium text-black text-sm  bg-white border border-1 border-black rounded-full ">
             <a href="#">Continue with Apple</a>
             <img class=" w-6 h-6 absolute ml-52 -mt-6" src="../images/logo-Apple.png" alt="">
           </button>
 
-          <button
-            class="w-full flex items-center justify-center py-3 font-medium text-sm text-white bg-sky-500 border border-none rounded-full ">
+          <button class="w-full flex items-center justify-center py-3 font-medium text-sm text-white bg-sky-500 border border-none rounded-full ">
             <span class="absolute bg-white border rounded-full p-2 left-8">
               <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -142,6 +121,12 @@
             </span>
             <a href="#">Continue with Google</a>
           </button>
+
+          <button
+            class="w-full py-3 font-medium text-white text-sm bg-mainBlue hover:bg-indigo-600 rounded-full border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center dark:bg-mainPurple dark:hover:bg-violet-500">
+            <span>Sign up With Email</span>
+          </button>
+          <h2 class="text-center font-poppins text-sm text-black dark:text-white">Already have an account? <a class="text-mainBlue dark:text-mainPurple" href="#">Log in</a></h2>
         </div>
       </form>
     </div>
