@@ -17,10 +17,17 @@ module.exports = {
         loginBtnBg: "#F0EEFF",
         cardGrey: '#161E2D',
         textGrey: '#8E95A1',
-        seperator: '#3F444E'
-        
+        seperator: '#3F444E',
+        block : '#1D1D41',
+        ConB : '#9F7AEA',
+        fillB : '#141332',
+        AddCB : '#FFC700',
+        AddCW: '##9F7AEA',
+        AddB : '#FE9E0F',
+        tab : '#F0F0FF'
       },
       fontFamily: {
+          
           'poppins': ['Poppins', 'sans-serif'],
           'fredoka': ['Fredoka', 'sans-serif'],
       },

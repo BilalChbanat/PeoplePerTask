@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dist/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Ruslan+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="bg-mainColorDark">
+<body class="bg-mainColorDark font-poppins">
     <section class="flex flex-row">
         <side class="bg-black rounded-3xl w-[25%]  py-[1%] px-[1%]">
             <div class="mb-[15%]">
@@ -23,7 +26,7 @@
                 </li>
                 <li class="flex flex-row mt-[10%] gap-[7%] mb-[15%]">
                     <img  src="../images/Icon.svg" alt="Clients">
-                    <a href="#"><span>Clients</span></a>
+                    <a href="dashclient.html"><span>Clients</span></a>
                 </li>
                 <li class="flex flex-row mt-[10%] gap-[7%] mb-[15%]">
                     <img  src="../images/black-credit-debit-card-18375 2.svg" alt="Payments">
@@ -48,7 +51,7 @@
                     <a href="#"><span>Dark Mode</span></a>
                 </li>
             </ul>
-            <div class="flex flex-row ml-[4%] mt-[50%]">
+            <div class="flex flex-row ml-[4%] my-[40%]">
                 <div class="rounded-[50%] bg-slate-400 mr-[7%]">
                     <img class="rounded-[50%]" src="../images/young man in formalwear standing with hands on hip.svg" alt="freelencer">
                 </div>
@@ -56,16 +59,18 @@
                     <h1>Ali Riaz</h1>
                     <p>Web Developer</p>
                 </div>
+                
             </div>
+            
         </side>
         <main style="width: 100%;">
             <nav class="flex flex-row justify-between items-center ">
-                <div>
+                <div class="text-white">
                     <h2> Welcome Back,Ali</h2>
                     <p>Here's what's happening with your store touday</p>
                 </div>
                     <div class="flex flex-row justify-between border-4 w-72 rounded-3xl">
-                        <p class="ml-[6%]">search for anyting</p>
+                        <p class="ml-[6%] text-white">search for anyting</p>
                         <img class="mr-[10%]" src="../images/search-2905 1.svg" alt="search">
                     </div>
             </nav>
@@ -74,7 +79,7 @@
                             <img src="../images/element-3.svg" alt="dahcboard">
                         <a href="#"><span>Dashboard</span></a>
                         </div>
-                        <div class="flex flex-row gap-2 justify-center items-center bg-white rounded-3xl text-center ml-[23%] w-[10%] h-8">
+                        <div class="flex flex-row gap-2 justify-center items-center bg-white rounded-3xl text-center ml-[23%] w-[15%] h-8">
                             <img src="../images/active-project1.svg" alt="active project">
                             <a href="#"><span>Active Projects</span></a>
                         </div>
@@ -105,17 +110,21 @@
         </ul>
                 </div>
             </section>
-<section class="flex flex-row items-center mt-[3%]">
-    <div class="w-[60%] border p-[1%] rounded-3xl mx-[2%] bg-textGrey">
-        <div class="flex flex-row justify-between text-white">
-            <h1>transaction </h1>
-            <div class="flex flex-row items-center border w-48 rounded-xl p-1">
-                <p  class="mr-[60%]">search</p>
-                <img src="../images/search-2905 1.svg" alt="search">
+    <section class="flex flex-row items-center mt-[3%] mx-[2%]">
+        <img class="w-[60%]" src="../images/statisticDiag.svg" alt="diagramme">
+        <img class="ml-[4%]" src="../images/diagr2.svg" alt="diagramme">
+    </section>
+    <section class="flex flex-row items-center mt-[3%]">
+        <div class="w-[60%] border p-[1%] rounded-3xl mx-[2%] bg-textGrey">
+            <div class="flex flex-row justify-between text-white">
+                <h1>transaction </h1>
+                <div class="flex flex-row items-center border w-48 rounded-xl p-1">
+                    <p  class="mr-[60%]">search</p>
+                    <img src="../images/search-2905 1.svg" alt="search">
+                </div>
             </div>
-        </div>
-        <table class="w-[100%] mt-[2%] text-white">
-            <tr>
+            <table class="w-[100%] mt-[2%] text-white">
+                <tr>
                 <td>Name</td>
                 <td>Date</td>
                 <td>Amount</td>
@@ -154,9 +163,9 @@
                         </tr>
                     </table>
                 </div>
-                <div class="w-[35%] border p-[1%] rounded-3xl text-white">
+                <div class="w-[30%] border p-[1%] rounded-3xl text-white ">
                     <h2>Employee region</h2>
-                    <table class="w-[100%]">
+                    <table class="w-[100%] flex justify-center">
                         <tr>
                             <td><span>Morroco</span><br>20 employee
                             </td>
