@@ -49,6 +49,10 @@ module.exports = {
           'poppins': ['Poppins', 'sans-serif'],
           'fredoka': ['Fredoka', 'sans-serif'],
         },
+
+        backgroundImage: {
+          'body-bg': "url('../images/bg.png')",
+        }
     },
   },
   plugins: [],
