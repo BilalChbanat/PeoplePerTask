@@ -17,6 +17,10 @@ module.exports = {
         cardDarkMod: '#161E2D',
         pColorWightMode: '#363848',
         pColorDarkMode: '#A9A9A9',
+        nameTitleColor: '#9F7AEA',
+      },
+      width: {
+        'ss': '69vw',
       },
       boxShadow: {
         'shadowBox': '5px 5px 25px rgba(1 1 1 / 20%);',
