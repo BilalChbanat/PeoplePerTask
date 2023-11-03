@@ -8,10 +8,19 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'hero': "1030px",
+        'hero': "1110px",
+        'heromax': {'max': "1110px"},
+        'herosecond': {'max': "770px"},
+        'herothird': {'max': "628px"},
         'hf': "1430px",
         'hs': "1070px",
-        'ht': "760px",
+        'ht': "770px",
+        'hl': {'max': "770px"},
+        'ff': "1040px",
+        'fs': "1003px",
+        'ft': "860px",
+        'fff': "688px",
+        'ffff': "816px"
       },
       colors: {
         cardGrey: '#161E2D',
@@ -21,24 +30,19 @@ module.exports = {
         mainBlue: "#6366F1",
         defaultText: "#363848",
         loginBtnBg: "#F0EEFF",
-        cardGrey: '#161E2D',
-        textGrey: '#8E95A1',
         seperator: '#3F444E',
-        block : '#1D1D41',
-        ConB : '#9F7AEA',
-        fillB : '#141332',
-        AddCB : '#FFC700',
-        AddCW: '#9F7AEA',
-        AddB : '#FE9E0F',
-        tab : '#F0F0FF',
-        popup : '#6366F1',
-        confirmB : '#FFD700'
+        darkGrey: '#A9A9A9',
+        seperator: '#3F444E'
       },
       fontFamily: {
           
           'poppins': ['Poppins', 'sans-serif'],
           'fredoka': ['Fredoka', 'sans-serif'],
         },
+
+        backgroundImage: {
+          'body-bg': "url('../images/bg.png')",
+        }
     },
   },
   plugins: [],
