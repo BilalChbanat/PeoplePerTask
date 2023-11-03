@@ -58,6 +58,7 @@ const handleThemeSwitch = () => {
         currenTheme = "light";
     }
     toggleBurgerIcon();
+    getcurrentDate();
 };
 document.addEventListener("DOMContentLoaded", handleThemeSwitch);
 //handle dropdownMenu toggle
@@ -128,3 +129,8 @@ const handleBurgerMenuClick = () => {
 burgerMenus.forEach((burgerMenu) => {
     burgerMenu.addEventListener("click", handleBurgerMenuClick);
 });
+const getcurrentDate = () => {
+    const date = new Date().getFullYear();
+    const currentDate = document.getElementById("currentDate");
+    currentDate.textContent = date.toString();
+};
