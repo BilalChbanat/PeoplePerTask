@@ -16,6 +16,11 @@ module.exports = {
         'hs': "1070px",
         'ht': "770px",
         'hl': {'max': "770px"},
+        'ff': "1040px",
+        'fs': "1003px",
+        'ft': "860px",
+        'fff': "688px",
+        'ffff': "816px"
       },
       colors: {
         cardGrey: '#161E2D',
