@@ -221,31 +221,38 @@
                 <p>Add a New Project</p>
             </button>
      </div>  
-      <!-- Formulaire pour ajouter un projet -->
-    <div class="table-container w-[30%] h-[30%] hidden absolute top-[50%] translate-x-[50%] translate-y-[-50%] bg-loginBtnBg rounded-3xl py-[1%] px-[2%]">
+    
+    <!-- Boîte de dialogue modale pour la modification -->
+        
+    
+    
+</section>
+</main>
+  <!-- Formulaire pour ajouter un projet -->
+  <div class="hidden table-container fixed w-full h-screen bg-black bg-opacity-80">
+    <div class="absolute top-[35%] left-[35%] w-[30%] p-[2%] rounded-3xl bg-popup">
         <form id="projectForm" class="flex flex-col text-center">
-            <h3 class="text-AddC text-2xl ">Informations</h3>
+            <h3 class="text-AddC text-3xl subpixel-antialiased font-bold text-white mb-[2%]">Informations</h3>
             <input class="mb-[4%] rounded pl-[2%]" type="text" id="name" placeholder="Name">
             <input class="mb-[4%] rounded pl-[2%]" type="text" id="project" placeholder="Project">
             <input class="mb-[4%] rounded pl-[2%]" type="text" id="contact" placeholder="Contact">
             <input class="mb-[4%] rounded pl-[2%]" type="text" id="deadline" placeholder="Deadline">
-            <button type="button" id="submitProject" onclick="addProject()">Ajouter le Projet</button>
+            <button class="w-[40%] p-[2%] mx-[30%] border-2 rounded-full bg-confirmB" type="button" id="submitProject" onclick="addProject()">Confirm</button>
         </form>
     </div>
-    <!-- Boîte de dialogue modale pour la modification -->
-    <div class="modal hidden  absolute top-[50%] translate-x-[50%] rounded-3xl py-[1%] px-[2%] w-[30%] bg-mainPurple" id="editModal"> 
-        <form class="modal-content flex flex-col w-[100%] text-center">
-            <h2>Modifier le projet</h2>
+</div>
+<div class="hidden modal fixed w-full h-screen bg-black bg-opacity-80" id="editModal">
+    <div class="modal-content absolute top-[35%] left-[35%] w-[30%] p-[2%] rounded-3xl bg-popup"> 
+        <form class=" flex flex-col text-center">
+            <h2 class="text-AddC text-3xl subpixel-antialiased font-bold text-white mb-[2%]">Modifier le projet</h2>
             <input class="mb-[4%] rounded pl-[2%]" type="text" id="editName" placeholder="Name">
             <input class="mb-[4%] rounded pl-[2%]" type="text" id="editProject" placeholder="Project">
             <input class="mb-[4%] rounded pl-[2%]" type="text" id="editContact" placeholder="Contact">
             <input class="mb-[4%] rounded pl-[2%]" type="text" id="editDeadline" placeholder="Deadline">
-            <button type="button" id="saveEdit" onclick="saveEditedProject()">Enregistrer</button>
+            <button class="w-[40%] p-[2%] mx-[30%] border-2 rounded-full bg-confirmB" type="button" id="saveEdit" onclick="saveEditedProject()">Save</button>
         </form>
-    </div>
-    
-</section>
-</main>
+</div>
+</div>
 <script>
     const table = document.querySelector("table");
     const tableContainer = document.querySelector(".table-container");

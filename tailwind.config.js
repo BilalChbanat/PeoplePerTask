@@ -31,6 +31,8 @@ module.exports = {
         AddCW: '#9F7AEA',
         AddB : '#FE9E0F',
         tab : '#F0F0FF',
+        popup : '#6366F1',
+        confirmB : '#FFD700'
       },
       fontFamily: {
           
