@@ -28,9 +28,9 @@ module.exports = {
         ConB : '#9F7AEA',
         fillB : '#141332',
         AddCB : '#FFC700',
-        AddCW: '##9F7AEA',
+        AddCW: '#9F7AEA',
         AddB : '#FE9E0F',
-        tab : '#F0F0FF'
+        tab : '#F0F0FF',
       },
       fontFamily: {
           
