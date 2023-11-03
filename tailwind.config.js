@@ -18,7 +18,7 @@ module.exports = {
         textGrey: '#8E95A1',
         bluepeople: '#6366F1',
         seperator: '#3F444E',
-        darkGrey: '#A9A9A9',,
+        darkGrey: '#A9A9A9',
         cardDarkMod: '#161E2D',
         pColorWightMode: '#363848',
         pColorDarkMode: '#A9A9A9',
