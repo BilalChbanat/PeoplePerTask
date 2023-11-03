@@ -4,6 +4,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+
+
+      },
       colors: {
         mainColorDark: "#111827",
         mainPurple: "#9F7AEA",
@@ -14,6 +18,7 @@ module.exports = {
         textGrey: '#8E95A1',
         bluepeople: '#6366F1',
         seperator: '#3F444E',
+        darkGrey: '#A9A9A9',,
         cardDarkMod: '#161E2D',
         pColorWightMode: '#363848',
         pColorDarkMode: '#A9A9A9',
