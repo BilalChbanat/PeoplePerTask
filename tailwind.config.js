@@ -38,6 +38,7 @@ module.exports = {
         pColorDarkMode: '#A9A9A9',
         nameTitleColor: '#9F7AEA',
         darkGrey: '#A9A9A9',
+        seperator: '#3F444E',
         howitworks1: '#F4E9FD',
         howitworks2: '#F4E9FD',
         howitworks3: '#F4E9FD',
