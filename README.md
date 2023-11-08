@@ -28,7 +28,7 @@ UI/UX Developer
 ### Mohamed EL MORJANI
 UI/UX Developer
 ### Bilal Chbanat
-Front End Develoepr
+Front End Developer
 ### Yassir Elkhaili
 Front End Engineer
 
