@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="../global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Ruslan+Display&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <script src="../dist/sandbox.js"></script>
+    <style>        /* The slider */      
+        .checkbox-wrapper-64 input:checked + .slider {
+          background-color: #007bff;
+          border: 1px solid #007bff;
+        }
+      
+        .checkbox-wrapper-64 input:focus + .slider {
+          box-shadow: 0 0 1px #007bff;
+        }
+      
+        .checkbox-wrapper-64 input:checked + .slider:before {
+          transform: translateX(1.4em);
+          background-color: #fff;
+        }
+      </style>  
+    <title>PeoplePerTask</title>
 </head>
 <body class="font-poppins">
     <section class="flex flex-row">
@@ -84,7 +101,15 @@
                         <path d="M22.021 18.1751C20.7076 18.8329 19.2496 19.1991 17.7145 19.1991C11.9363 19.1991 7.25215 14.0118 7.25215 7.6129C7.25215 5.91281 7.5828 4.29823 8.17677 2.84375C4.54676 4.66173 2.021 8.70722 2.021 13.406C2.021 19.8049 6.70513 24.9922 12.4833 24.9922C16.7263 24.9922 20.3794 22.1951 22.021 18.1751Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <rect x="0.0209961" y="0.628906" width="24" height="26.5781"/>
                       </svg>
-                    <a href="#"><span>Dark Mode</span></a>
+                    <span>Dark Mode</span>
+                    <button type="button">
+                        <div id="checkbox-wrapper">
+                            <label class="text-[17px] relative inline-block w-[3.5em] h-[2em]">
+                                <input type="checkbox" class="invisible hidden focus:shadow-[0_0_1px_#007bff]">
+                                <span class="slider absolute cursor-pointer bg-white border transition duration-300 rounded-[30px] border-solid border-[#adb5bd] inset-0 before:absolute before:content-[''] before:h-[1.4em] before:w-[1.4em] before:bg-[#adb5bd] before:transition before:duration-300 before:rounded-[20px] before:left-[0.27em] before:bottom-[0.25em] focus:shadow-[0_0_1px_#007bff]"></span>
+                              </label>
+                        </div>
+                    </button>
                 </li>
             </ul>
             <div class="flex flex-row ml-[4%]  my-[40%]">

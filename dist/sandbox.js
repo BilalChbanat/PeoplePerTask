@@ -1,6 +1,8 @@
 "use strict";
 let currenTheme = "";
 const handleInitialTheme = () => {
+    const rootClasses = ["transition", "duration-100"];
+    rootClasses.forEach((rootClass) => document.documentElement.classList.add(rootClass));
     if (!("color-theme" in localStorage)) {
         currenTheme = "light";
     }
@@ -29,15 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
     //handle theme switch
     const toggleLightTheme = () => {
         document.documentElement.classList.remove("dark");
-        themeToggleLightIcon.classList.remove("hidden");
-        themeToggleDarkIcon.classList.add("hidden");
+        themeToggleLightIcon?.classList.remove("hidden");
+        themeToggleDarkIcon?.classList.add("hidden");
         localStorage.setItem("color-theme", "light");
         currenTheme = "light";
     };
     const toggleDarkTheme = () => {
         document.documentElement.classList.add("dark");
-        themeToggleDarkIcon.classList.remove("hidden");
-        themeToggleLightIcon.classList.add("hidden");
+        themeToggleDarkIcon?.classList.remove("hidden");
+        themeToggleLightIcon?.classList.add("hidden");
         localStorage.setItem("color-theme", "dark");
         currenTheme = "dark";
     };
@@ -58,8 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     //toggle default theme
     const handleThemeSwitch = () => {
-        const rootClasses = ["transition", "duration-100"];
-        rootClasses.forEach((rootClass) => document.documentElement.classList.add(rootClass));
         if (!("color-theme" in localStorage)) {
             toggleLightTheme();
             currenTheme = "light";
@@ -108,10 +108,12 @@ document.addEventListener("DOMContentLoaded", () => {
     //close dropdown on outside click
     const handleOutsideClick = (element, event) => {
         const target = event.target;
-        if (target !== dropDown &&
-            !element.contains(target) &&
-            element.classList.contains("opacity-100"))
-            toggleThemeDropdown();
+        if (element) {
+            if (target !== dropDown &&
+                !element.contains(target) &&
+                element.classList.contains("opacity-100"))
+                toggleThemeDropdown();
+        }
     };
     window.addEventListener("click", handleOutsideClick.bind(null, dropDown));
     //toggle theme
@@ -153,7 +155,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const getcurrentDate = () => {
         const date = new Date().getFullYear();
         const currentDate = document.getElementById("currentDate");
-        currentDate.textContent = date.toString();
+        if (currentDate)
+            currentDate.textContent = date.toString();
     };
     getcurrentDate();
+    //handle dashboard theme toggler
+    const dashboardToggle = document.querySelector("#checkbox-wrapper");
+    const handleDashbardThemeToggle = () => {
+    };
+    dashboardToggle.addEventListener("click", handleDashbardThemeToggle);
 });
