@@ -8,9 +8,11 @@ const handleInitialTheme = () => {
   if (!("color-theme" in localStorage)) {
     currenTheme = "light";
   } else if (localStorage.getItem("color-theme") === "auto") {
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? document.documentElement.classList.add("dark")
-      : document.documentElement.classList.remove("dark");
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
   } else if (localStorage.getItem("color-theme") === "dark") {
     document.documentElement.classList.add("dark");
     currenTheme = "dark";
@@ -194,9 +196,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const dashboardToggle = document.querySelector(
     "#checkbox-wrapper"
   ) as HTMLDivElement;
+  const dashboardInput = dashboardToggle.querySelector("input") as HTMLInputElement;
+  const slider = dashboardToggle.querySelector("span") as HTMLSpanElement;
 
-  const handleDashbardThemeToggle = () => {
-    
+  const toggleThemeSwitcher = () => {
+    const classes: Array<string> = ['bg-mainColorDark', 'border-[#007bff]', 'before:translate-x-[1.4em]', 'before:bg-mainPurple', 'border-mainColorDark', 'bg-white'];
+    if (document.activeElement === dashboardToggle.parentNode) {
+      slider.classList.toggle("shadow-[0_0_1px_#007bff]");
+    }
+      classes.forEach((className: string) =>
+    slider.classList.toggle(className)
+  );
+  }
+
+  currenTheme === "dark" && toggleThemeSwitcher();
+
+  const handleDashbardThemeToggle = (event: MouseEvent) => {
+    if(event.target === dashboardInput || event.target === dashboardToggle) {
+      toggleThemeSwitcher();
+      handleThemeSwitch();
+      if (currenTheme === "dark") {
+        toggleLightTheme();
+        currenTheme = "light";
+      } else {
+        toggleDarkTheme();
+        currenTheme = "dark";
+      }
+    }
   };
 
   dashboardToggle.addEventListener("click", handleDashbardThemeToggle);

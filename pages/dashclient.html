@@ -7,28 +7,13 @@
     <link rel="stylesheet" href="../global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Ruslan+Display&display=swap" rel="stylesheet">
     <script src="../dist/sandbox.js"></script>
-    <style>        /* The slider */      
-        .checkbox-wrapper-64 input:checked + .slider {
-          background-color: #007bff;
-          border: 1px solid #007bff;
-        }
-      
-        .checkbox-wrapper-64 input:focus + .slider {
-          box-shadow: 0 0 1px #007bff;
-        }
-      
-        .checkbox-wrapper-64 input:checked + .slider:before {
-          transform: translateX(1.4em);
-          background-color: #fff;
-        }
-      </style>  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Ruslan+Display&display=swap" rel="stylesheet">
     <title>PeoplePerTask</title>
 </head>
 <body class="font-poppins">
     <section class="flex flex-row">
-        <side class="bg-white rounded-3xl w-[25%]  py-[1%] px-[1%] text-mainBlue border">
+        <side class="bg-slate-50 rounded-3xl w-[25%]  py-[1%] px-[1%] text-mainBlue border">
             <div class="mb-[15%]">
                 <img src="../images/Link_logo.svg.svg" alt="logo">
             </div>
@@ -94,7 +79,7 @@
                         <path d="M9.111 10.6875C9.3461 9.94737 9.81015 9.32327 10.421 8.92574C11.0318 8.5282 11.7499 8.38289 12.4482 8.51553C13.1465 8.64817 13.7798 9.0502 14.2361 9.65043C14.6923 10.2507 14.9421 11.0103 14.941 11.7949C14.941 14.0098 11.941 15.1172 11.941 15.1172M12.021 19.5469H12.031M22.021 14.0098C22.021 20.1259 17.5438 25.084 12.021 25.084C6.49815 25.084 2.021 20.1259 2.021 14.0098C2.021 7.89364 6.49815 2.93555 12.021 2.93555C17.5438 2.93555 22.021 7.89364 22.021 14.0098Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <rect x="0.0209961" y="0.720703" width="24" height="26.5781" />
                       </svg>
-                    <a href="#"><span>Help Center</span></a>
+                    <a href="#"><span class="dark:text-red-700">Help Center</span></a>
                 </li>
                 <li class="flex flex-row mt-2.5 gap-[7%] mb-[15%]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" viewBox="0 0 25 28" fill="none">
@@ -102,13 +87,11 @@
                         <rect x="0.0209961" y="0.628906" width="24" height="26.5781"/>
                       </svg>
                     <span>Dark Mode</span>
-                    <button type="button">
-                        <div id="checkbox-wrapper">
+                    <button type="button" id="checkbox-wrapper">
                             <label class="text-[17px] relative inline-block w-[3.5em] h-[2em]">
                                 <input type="checkbox" class="invisible hidden focus:shadow-[0_0_1px_#007bff]">
-                                <span class="slider absolute cursor-pointer bg-white border transition duration-300 rounded-[30px] border-solid border-[#adb5bd] inset-0 before:absolute before:content-[''] before:h-[1.4em] before:w-[1.4em] before:bg-[#adb5bd] before:transition before:duration-300 before:rounded-[20px] before:left-[0.27em] before:bottom-[0.25em] focus:shadow-[0_0_1px_#007bff]"></span>
+                                <span class="slider bg-white absolute cursor-pointer border transition duration-300 rounded-[30px] border-solid border-[#adb5bd] inset-0 before:absolute before:content-[''] before:h-[1.4em] before:w-[1.4em] before:bg-[#FE8D4D] before:transition before:duration-300 before:rounded-[20px] before:left-[0.27em] before:bottom-[0.25em]"></span>
                               </label>
-                        </div>
                     </button>
                 </li>
             </ul>
@@ -123,7 +106,7 @@
             </div>
             </div>
         </side>
-        <main style="width: 100%;">
+        <main style="width: 100%;" class="bg-slate-50">
             <nav class="flex flex-row justify-between items-center p-[1%]">
                 <div>
                     <h2 class="font-bold"> Welcome Back,Ali</h2>
@@ -252,7 +235,7 @@
     
     
 </section>
-</main>
+</main class="bg-slate-50">
   <!-- Formulaire pour ajouter un projet -->
   <div class="hidden table-container fixed w-full h-screen bg-black bg-opacity-80">
     <div class="absolute top-[35%] left-[35%] w-[30%] p-[2%] rounded-3xl bg-popup">
