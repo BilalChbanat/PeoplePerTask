@@ -2,14 +2,13 @@
 module.exports = {
   content: [
     "./**/*.html",
-    "./scripts/*.js"
+    "./scripts/*.js",
+    "./node_modules/flowbite/**/*.js"
   ],
   darkMode: 'class',
   theme: {
     extend: {
       screens: {
-
-
         'hero': "1110px",
         'heromax': { 'max': "1110px" },
         'herosecond': { 'max': "770px" },
@@ -66,6 +65,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 
