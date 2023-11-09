@@ -1167,6 +1167,11 @@ video {
   border-bottom-color: rgb(63 68 78 / var(--tw-border-opacity));
 }
 
+.bg-AddB {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 132 18 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#FE8D4D\] {
   --tw-bg-opacity: 1;
   background-color: rgb(254 141 77 / var(--tw-bg-opacity));
@@ -1215,6 +1220,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-sidedark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 29 65 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-80 {

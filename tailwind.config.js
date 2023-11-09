@@ -32,7 +32,8 @@ module.exports = {
         loginBtnBg: "#F0EEFF",
         seperator: '#3F444E',
         darkGrey: '#A9A9A9',
-        seperator: '#3F444E'
+        seperator: '#3F444E',
+        AddB : '#ff8412',
       },
       fontFamily: {
           
