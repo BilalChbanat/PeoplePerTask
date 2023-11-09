@@ -20,6 +20,9 @@ Welcome to People Per Task, your go-to destination for freelance talent! Our Git
 
 ![App Footer](https://i.imgur.com/BlWPQtL.png)
 
+![App SignUp](https://i.imgur.com/ZtbSJCI.png)
+
+![App SignIn](https://i.imgur.com/jk1Djnk.png)
 
 ## 🚀 Code Hooligans
 
