@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./**/*.html",
-    "./scripts/*.js",
+    "./dist/*.js",
     "./node_modules/flowbite/**/*.js"
   ],
   darkMode: 'class',

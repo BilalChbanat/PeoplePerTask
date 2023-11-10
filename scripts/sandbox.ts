@@ -1,12 +1,18 @@
 let currenTheme: string = "";
 
 const handleInitialTheme = () => {
+  const rootClasses: Array<string> = ["transition", "duration-100"];
+  rootClasses.forEach((rootClass: string) =>
+    document.documentElement.classList.add(rootClass)
+  );
   if (!("color-theme" in localStorage)) {
     currenTheme = "light";
   } else if (localStorage.getItem("color-theme") === "auto") {
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? document.documentElement.classList.add("dark")
-      : document.documentElement.classList.remove("dark");
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
   } else if (localStorage.getItem("color-theme") === "dark") {
     document.documentElement.classList.add("dark");
     currenTheme = "dark";
@@ -39,16 +45,16 @@ document.addEventListener("DOMContentLoaded", () => {
   //handle theme switch
   const toggleLightTheme = (): void => {
     document.documentElement.classList.remove("dark");
-    themeToggleLightIcon.classList.remove("hidden");
-    themeToggleDarkIcon.classList.add("hidden");
+    themeToggleLightIcon?.classList.remove("hidden");
+    themeToggleDarkIcon?.classList.add("hidden");
     localStorage.setItem("color-theme", "light");
     currenTheme = "light";
   };
 
   const toggleDarkTheme = (): void => {
     document.documentElement.classList.add("dark");
-    themeToggleDarkIcon.classList.remove("hidden");
-    themeToggleLightIcon.classList.add("hidden");
+    themeToggleDarkIcon?.classList.remove("hidden");
+    themeToggleLightIcon?.classList.add("hidden");
     localStorage.setItem("color-theme", "dark");
     currenTheme = "dark";
   };
@@ -74,10 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //toggle default theme
   const handleThemeSwitch = () => {
-    const rootClasses: Array<string> = ["transition", "duration-100"];
-    rootClasses.forEach((rootClass: string) =>
-      document.documentElement.classList.add(rootClass)
-    );
     if (!("color-theme" in localStorage)) {
       toggleLightTheme();
       currenTheme = "light";
@@ -126,12 +128,14 @@ document.addEventListener("DOMContentLoaded", () => {
   //close dropdown on outside click
   const handleOutsideClick = (element: HTMLElement, event: Event) => {
     const target = event.target as HTMLElement;
-    if (
-      target !== dropDown &&
-      !element.contains(target) &&
-      element.classList.contains("opacity-100")
-    )
-      toggleThemeDropdown();
+    if (element) {
+      if (
+        target !== dropDown &&
+        !element.contains(target) &&
+        element.classList.contains("opacity-100")
+      )
+        toggleThemeDropdown();
+    }
   };
 
   window.addEventListener("click", handleOutsideClick.bind(null, dropDown));
@@ -182,8 +186,44 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentDate = document.getElementById(
       "currentDate"
     ) as HTMLAnchorElement;
-    currentDate.textContent = date.toString();
+    if (currentDate) currentDate.textContent = date.toString();
   };
 
   getcurrentDate();
+
+  //handle dashboard theme toggler
+
+  const dashboardToggle = document.querySelector(
+    "#checkbox-wrapper"
+  ) as HTMLDivElement;
+  const dashboardInput = dashboardToggle.querySelector("input") as HTMLInputElement;
+  const slider = dashboardToggle.querySelector("span") as HTMLSpanElement;
+
+  const toggleThemeSwitcher = () => {
+    const classes: Array<string> = ['bg-mainColorDark', 'border-[#007bff]', 'before:translate-x-[1.4em]', 'before:bg-mainPurple', 'border-mainColorDark', 'bg-white'];
+    if (document.activeElement === dashboardToggle.parentNode) {
+      slider.classList.toggle("shadow-[0_0_1px_#007bff]");
+    }
+      classes.forEach((className: string) =>
+    slider.classList.toggle(className)
+  );
+  }
+
+  currenTheme === "dark" && toggleThemeSwitcher();
+
+  const handleDashbardThemeToggle = (event: MouseEvent) => {
+    if(event.target === dashboardInput || event.target === dashboardToggle) {
+      toggleThemeSwitcher();
+      handleThemeSwitch();
+      if (currenTheme === "dark") {
+        toggleLightTheme();
+        currenTheme = "light";
+      } else {
+        toggleDarkTheme();
+        currenTheme = "dark";
+      }
+    }
+  };
+
+  dashboardToggle.addEventListener("click", handleDashbardThemeToggle);
 });
