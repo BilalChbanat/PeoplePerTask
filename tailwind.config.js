@@ -32,7 +32,6 @@ module.exports = {
         cardGrey: '#161E2D',
         textGrey: '#8E95A1',
         bluepeople: '#6366F1',
-        seperator: '#3F444E',
         cardDarkMod: '#161E2D',
         pColorWightMode: '#363848',
         pColorDarkMode: '#A9A9A9',
