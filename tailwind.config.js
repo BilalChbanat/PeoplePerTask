@@ -49,7 +49,9 @@ module.exports = {
       width: {
         'ss': '69vw',
       },
-
+      spacing: {
+        'apply': '-11rem',
+      },
 
       boxShadow: {
         'shadowBox': '5px 5px 25px rgba(1 1 1 / 20%);',
@@ -62,11 +64,13 @@ module.exports = {
 
       backgroundImage: {
         'body-bg': "url('../images/bg.png')",
+        'apply-d': "url('../images/apply_pic.svg')",
       }
     },
   },
   plugins: [
     require('flowbite/plugin')
   ],
+
 }
 
