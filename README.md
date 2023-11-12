@@ -9,10 +9,15 @@ Welcome to People Per Task, your go-to destination for freelance talent! Our Git
 ## Features
 
 - Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
-
+- User Dashbard
+- Admin Dashboard
+- Reactive design
+- Home Page
+- Contact Page
+- Sign In Page
+- Sign Up Page
+- About Page
+- Apply Details Page
 
 ## Screenshots
 
