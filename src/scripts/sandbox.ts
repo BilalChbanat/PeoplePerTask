@@ -1,3 +1,11 @@
+/** 
+ * @author Yassir Elkhaili
+ * @license MIT
+ * @todo sticky header on scroll down
+ * @todo bottom border moves to nav item on hover
+ * @todo handle navigation url for pages
+*/
+
 let currenTheme: string = "";
 
 const handleInitialTheme = () => {
