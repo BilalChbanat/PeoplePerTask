@@ -40,7 +40,7 @@ module.exports = {
         seperator: '#3F444E',
         howitworks1: '#F4E9FD',
         howitworks2: '#F4E9FD',
-        howitworks3: '#F4E9FD',
+        howitworks3: '#ECFAF0',
         howitworksdark1: '#1D193A',
         howitworksdark2: '#131C37',
         howitworksdark3: '#152A2D',
@@ -65,8 +65,6 @@ module.exports = {
       }
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
+  plugins: [],
 }
 
