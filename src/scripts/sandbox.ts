@@ -1,3 +1,11 @@
+/** 
+ * @author Yassir Elkhaili
+ * @license MIT
+ * @todo sticky header on scroll down
+ * @todo bottom border moves to nav item on hover
+ * @todo handle navigation url for pages
+*/
+
 let currenTheme: string = "";
 
 const handleInitialTheme = () => {
@@ -196,16 +204,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const dashboardToggle = document.querySelector(
     "#checkbox-wrapper"
   ) as HTMLDivElement;
-  const dashboardInput = dashboardToggle.querySelector("input") as HTMLInputElement;
-  const slider = dashboardToggle.querySelector("span") as HTMLSpanElement;
+ const dashboardInput = dashboardToggle?.querySelector("input") as HTMLInputElement;
+ const slider = dashboardToggle?.querySelector("span") as HTMLSpanElement;
 
   const toggleThemeSwitcher = () => {
     const classes: Array<string> = ['bg-mainColorDark', 'border-[#007bff]', 'before:translate-x-[1.4em]', 'before:bg-mainPurple', 'border-mainColorDark', 'bg-white'];
-    if (document.activeElement === dashboardToggle.parentNode) {
-      slider.classList.toggle("shadow-[0_0_1px_#007bff]");
+    if (document.activeElement === dashboardToggle?.parentNode) {
+      slider?.classList.toggle("shadow-[0_0_1px_#007bff]");
     }
       classes.forEach((className: string) =>
-    slider.classList.toggle(className)
+    slider?.classList.toggle(className)
   );
   }
 
@@ -225,5 +233,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  dashboardToggle.addEventListener("click", handleDashbardThemeToggle);
+  dashboardToggle?.addEventListener("click", handleDashbardThemeToggle);
 });
