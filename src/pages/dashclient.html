@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="../../dist/output.css">
     <link rel="stylesheet" href="../global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="../dist/sandbox.js"></script>
+    <script src="../../dist/sandbox.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Ruslan+Display&display=swap" rel="stylesheet">
     <title>PeoplePerTask</title>
 </head>
@@ -15,7 +15,7 @@
     <section class="flex flex-row">
         <side class="dark:bg-indigo-950 dark:border-none text-base rounded-3xl w-[25%] py-[1%] px-[1%] border">
             <div class="mb-[15%]">
-                <img src="../images/Link_logo.svg.svg" alt="logo">
+                <img src="../../images/Link_logo.svg.svg" alt="logo">
             </div>
             <ul class=" ml-[2%] mb-[10%] text-lg">
                 <li class="flex p-3 mb-15 w-3/4 h-14 transition-transform duration-200 ease-out transform-colors dark:hover:bg-purple-700  hover:scale-110 rounded mb-[10%]">
@@ -92,7 +92,7 @@
             </ul>
             <div class="flex flex-row ml-[4%]  my-[40%]">
                 <div class="rounded-[50%] bg-slate-400 mr-[7%]">
-                    <img class="rounded-[50%]" src="../images/young man in formalwear standing with hands on hip.svg" alt="freelencer">
+                    <img class="rounded-[50%]" src="../../images/young man in formalwear standing with hands on hip.svg" alt="freelencer">
                 </div>
                 <div class="text-black dark:text-white">
                     <h1 class="text-2xl">Ali Riaz</h1>
@@ -106,13 +106,13 @@
                 <div class="text-black dark:text-white">
                     <div class="flex gap-2">
                         <h2 class="font-bold text-2xl "> Welcome Back,Ali</h2>
-                        <img src="../images/Waving Hand Emoji.svg" alt="waving hand">
+                        <img src="../../images/Waving Hand Emoji.svg" alt="waving hand">
                       </div>
                     <p class="text-textG text-base">Here's what's happening with your store touday</p>
                 </div>
                     <div id="search" class="flex flex-row justify-between text-xs border-4 w-72 rounded-3xl p-1 dark:bg-indigo-950 dark:border-none">
                         <p class="ml-[6%]">search for anyting</p>
-                        <img class="mr-[10%]" src="../images/search-2905 1.svg" alt="search">
+                        <img class="mr-[10%]" src="../../images/search-2905 1.svg" alt="search">
                     </div>
             </nav>
             <nav class=" bg-mainBlue dark:bg-purple-500 text-xl bg-opacity-75 p-4 text-mainBlue dark:text-purple-500 font-bold rounded-md h-[6%] flex flex-row items-center gap-5">                    
@@ -180,7 +180,7 @@
         <div class="hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-80" id="formAdd">
            <div class="fixed top-[30%] right-[30%] w-[45%] h-[40%] rounded-3xl bg-white py-2">
             <button class="top-0 mx-[94%] w-10 h-10 rounded-full border-2 p-1 " id="closeButton" onclick="closeForm()">
-                <img src="../images/close.svg" alt="close">
+                <img src="../../images/close.svg" alt="close">
             </button>
             <div class="py-2 px-10 text-center">
             <h3 class=" text-3xl subpixel-antialiased font-bold mb-[2%] dark:text-indigo-950">Informations</h3>
@@ -198,7 +198,7 @@
         <div class="hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-80" id="formUpdate">
             <div class="fixed top-[30%] right-[30%] w-[45%] h-[40%] rounded-3xl bg-white py-2">
                 <button class="top-0 mx-[94%] w-10 h-10 rounded-full border-2 p-1 " id="closeButton" onclick="closeForm()">
-                    <img src="../images/close.svg" alt="close">
+                    <img src="../../images/close.svg" alt="close">
                 </button>
                 <div class="py-2 px-10 text-center"> 
                 <h2 class="text-AddC text-3xl subpixel-antialiased font-bold mb-[2%] dark:text-indigo-950">Modifier le projet</h2>
@@ -215,7 +215,7 @@
         <!-- popup -->
         <div class="popup hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-80">
             <div class="fixed top-[30%] right-[30%] w-[40%] p-7 bg-white py-2 text-center text-black">
-                <img class="mx-auto w-16 h-16" src="../images/done.svg" alt="">
+                <img class="mx-auto w-16 h-16" src="../../images/done.svg" alt="">
                 <p class="mb-[7%]">Your project has been saved successfully</p>
                 <button id="OK">OK</button>
             </div>
@@ -223,7 +223,7 @@
 
         <div class="popup-delet hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-80">
             <div class="fixed top-[30%] right-[30%] w-[40%] p-7 bg-white py-2 text-center text-black">
-                <img class="mx-auto w-16 h-16" src="../images/done.svg" alt="">
+                <img class="mx-auto w-16 h-16" src="../../images/done.svg" alt="">
                 <p class="mb-[7%]">This project has been successfully deleted</p>
                 <button id="OK-D">OK</button>
             </div>
@@ -301,8 +301,8 @@ save.addEventListener("click",function(event){
                 <td class="p-3">${Projects[i].contact}</td>
                 <td class="p-3">${Projects[i].deadline}</td>
                 <td class="p-3" style="display: flex;justify-content: center;">
-                    <button id="edit" class="edit-button" onclick="updateProject(${i})"><img  src="../images/editW_square_icon_149939 1.svg" alt="supression"></button>
-                    <button class="delete-button"  onclick="deleteData(${i})"><img  src="../images/delete_circle_icon_149950 1.svg" alt="supression"></button>
+                    <button id="edit" class="edit-button" onclick="updateProject(${i})"><img  src="../../images/editW_square_icon_149939 1.svg" alt="supression"></button>
+                    <button class="delete-button"  onclick="deleteData(${i})"><img  src="../../images/delete_circle_icon_149950 1.svg" alt="supression"></button>
                 </td>
             </tr>`
         }
