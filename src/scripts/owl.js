@@ -1,7 +1,9 @@
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
         nav: true,
-        navText: [$('.NextBtn'),$('.PrevBtn')],
+        loop:true,
+        autoplay:true,
+        autoplayTimeout: 6000,
         margin: 20,
         responsive:{
             0:{
@@ -18,4 +20,10 @@ $(document).ready(function(){
             }
         }
     });
+$('.customNextBtn').click(function() {
+    $('.owl-carousel').trigger('next.owl.carousel');
+})
+$('.customPrevBtn').click(function() {
+    $('.owl-carousel').trigger('prev.owl.carousel');
+})
   });

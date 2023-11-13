@@ -131,15 +131,13 @@
           <img src="./images/hero-image.svg" alt="hero-image">
         </div>
       </section>
-      <!-- <section class="py-12">
-        <div class="justify-between items-start flex gap-6">
+      <section class="py-12 justify-between items-start flex gap-4 hs:flex-nowrap flex-wrap">
           <img src="./images/company1.svg" alt="company1">
           <img src="./images/company2.svg" alt="company2">
           <img src="./images/company3.svg" alt="company3">
           <img src="./images/company4.svg" alt="company4">
           <img src="./images/company5.svg" alt="company5">
-        </div>
-      </section> -->
+      </section>
       <section class="flex justify-between items-center hero:flex-row hero:gap-0 gap-6 flex-col pt-12 w-[100%]">
         <div class="w-[50%] hero:max-w-[40%] hf:max-w-[60%] max-w-full heromax:w-[100%] flex justify-between items-start flex-col gap-6">
          <div>
@@ -211,16 +209,14 @@
           <img src="./images/howitworks.svg" alt="worker holding a pen">
         </div>
       </section>
-      <section class="flex justify-center items-center flex-col pt-12 w-full gap-12">
+      <section class="flex justify-center items-center flex-col pt-12 w-full gap-12 relative">
         <div class="flex flex-row justify-between items-center w-full">
           <h2 class="dark:text-slate-50 text-defaultText font-poppins font-semibold text-[28px]">Featured Profile This Week</h2>
           <button type="button" class="text-mainBlue font-poppins text-base dark:text-mainPurple">View More</button>
         </div>
-          <div class="flex justify-center items-center owl-carousel flex-col">
-            <!-- <div class="w-[100%]">
-              <button type="button" class="NextBtn absolute z-10 rounded-full w-10 flex justify-center items-center aspect-square dark:bg-mainPurple bg-mainBlue drop-shadow-[0px_19px_29px_0px_#3E357824] shadow-[0px_19px_29px_0px_#3E357824]"><img src="./images/left-arrow.svg" alt="carousel-arrow-left"></button>
-        <button type="button" class="PrevBtn absolute  rounded-full w-10 aspect-square dark:bg-mainPurple bg-mainBlue flex justify-center items-center drop-shadow-[0px_19px_29px_0px_#3E357824] shadow-[0px_19px_29px_0px_#3E357824]"><img src="./images/right-arrow.svg" alt="carousel-arrow-right"></button>
-            </div> -->
+        <button type="button" class="absolute left-[-1.1rem] top-[14rem] customNextBtn z-10 rounded-full w-10 flex justify-center items-center aspect-square dark:bg-mainPurple bg-mainBlue drop-shadow-[0px_19px_29px_0px_#3E357824] shadow-[0px_19px_29px_0px_#3E357824]"><img src="./images/left-arrow.svg" alt="carousel-arrow-left"></button>
+        <button type="button" class="absolute right-[-1rem] top-[14rem] z-10 customPrevBtn rounded-full w-10 aspect-square dark:bg-mainPurple bg-mainBlue flex justify-center items-center drop-shadow-[0px_19px_29px_0px_#3E357824] shadow-[0px_19px_29px_0px_#3E357824]"><img src="./images/right-arrow.svg" alt="carousel-arrow-right"></button>
+          <div class="owl-carousel">
             <div class="flex justify-center items-center flex-col gap-6 w-[330px] rounded-[18px] bg-white dark:bg-cardGrey shadow-[0px_2px_28px_0px_#3E35780A] drop-shadow-[0px_2px_28px_0px_#3E35780A] p-7">
               <div class="flex justify-start items-center gap-4 w-full">
                 <div class="flex justify-center items-center relative">
@@ -361,7 +357,7 @@
               </div>
               <div class="flex justify-center items-center flex-row w-full gap-4">
                 <div class="rounded-full aspect-square w-[50px] bg-[#FF5353] flex justify-center items-center"><img src="./images/SVG (3).svg" alt="heart-emoji"></div>
-                <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-full">Sign Up</button>
+                <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-full">Apply Now</button>
               </div>
             </div>
             <div class="flex flex-col gap-8 justify-center items-center rounded-[18px] drop-shadow-[0px_2px_28px_0px_#3E35780A] shadow-[0px_2px_28px_0px_#3E35780A] bg-white dark:bg-cardGrey p-8 w-[329px]">
@@ -384,7 +380,7 @@
               </div>
               <div class="flex justify-center items-center flex-row w-full gap-4">
                 <div class="rounded-full aspect-square w-[50px] bg-[#FF5353] flex justify-center items-center"><img src="./images/SVG (3).svg" alt="heart-emoji"></div>
-                <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-full">Sign Up</button>
+                <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-full">Apply Now</button>
               </div>
             </div>
             <div class="flex flex-col gap-8 justify-center items-center rounded-[18px] drop-shadow-[0px_2px_28px_0px_#3E35780A] shadow-[0px_2px_28px_0px_#3E35780A] bg-white dark:bg-cardGrey p-8 w-[329px]">
@@ -407,7 +403,7 @@
               </div>
               <div class="flex justify-center items-center flex-row w-full gap-4">
                 <div class="rounded-full aspect-square w-[50px] bg-[#FF5353] flex justify-center items-center"><img src="./images/SVG (3).svg" alt="heart-emoji"></div>
-                <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-full">Sign Up</button>
+                <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-full">Apply Now</button>
               </div>
             </div>
             <div class="flex flex-col gap-8 justify-center items-center rounded-[18px] drop-shadow-[0px_2px_28px_0px_#3E35780A] shadow-[0px_2px_28px_0px_#3E35780A] bg-white dark:bg-cardGrey p-8 w-[329px]">
@@ -430,14 +426,65 @@
               </div>
               <div class="flex justify-center items-center flex-row w-full gap-4">
                 <div class="rounded-full aspect-square w-[50px] bg-[#FF5353] flex justify-center items-center"><img src="./images/SVG (3).svg" alt="heart-emoji"></div>
-                <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-full">Sign Up</button>
+                <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-full">Apply Now</button>
               </div>
             </div>
-            <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-3 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-[12rem]">View More</button>
+        </section>
+        <section class="flex justify-center items-center pt-8">
+          <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-3 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-[12rem]">View More</button>
         </section>
         <section class="flex justify-center items-center flex-col pt-12 w-full gap-8">
-          
+          <div class="flex justify-around fff:flex-nowrap flex-wrap items-center rounded-[20px] dark:bg-cardGrey bg-mainBlue w-full fff:py-12 py-8 bg-[url('./images/bg-svg.svg')] after:top-0 after:left-0 after:bg-no-repeat after:bg-cover after:content-none after:absolute after:z-10">
+            <div class="flex justify-center items-center gap-2 flex-col w-[150px]">
+              <h5 class="font-poppins text-[50px] font-semibold text-center text-slate-50">36.8k</h5>
+              <p class="font-poppins text-slate-50 font-normal text-base text-center">Talented Freelancer</p>
+            </div>
+            <div class="flex justify-center items-center gap-2 flex-col w-[150px]">
+              <h5 class="font-poppins text-[50px] font-semibold text-center text-slate-50">459k</h5>
+              <p class="font-poppins text-slate-50 font-normal text-base text-center">VIsitors</p>
+            </div>
+            <div class="flex justify-center items-center gap-2 flex-col w-[150px]">
+              <h5 class="font-poppins text-[50px] font-semibold text-center text-slate-50">56.5k</h5>
+              <p class="font-poppins text-slate-50 font-normal text-base text-center">Contract Made</p>
+            </div>
+            <div class="flex justify-center items-center gap-2 flex-col w-[150px]">
+              <h5 class="font-poppins text-[50px] font-semibold text-center text-slate-50">852k</h5>
+              <p class="font-poppins text-slate-50 font-normal text-base text-center">Companies</p>
+            </div>
+          </div>
         </section>
+        <section class="flex justify-center items-center flex-col pt-12 w-full gap-8">
+          <div class="flex justify-center items-center gap-3 flex-col">
+           <h2 class="text-defaultText dark:text-slate-50 font-poppins font-semibold text-[32px]">Pricing Plan</h2>
+           <p class="dark:text-textGrey text-defaultText font-poppins font-normal text-sm text-center max-w-[600px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quia quos vero vel iste tenetur dolor alias sit excepturi. Illo aliquam culpa facilis iusto beatae placeat accusantium non eum minima.</p>
+          </div>
+           <div class="pt-8 flex justify-center items-center gap-6 flex-wrap">
+             <div class="flex flex-col gap-8 justify-center items-center rounded-[18px] drop-shadow-[0px_2px_28px_0px_#3E35780A] shadow-[0px_2px_28px_0px_#3E35780A] bg-white dark:bg-cardGrey p-8 w-[329px]">
+               <div class="flex justify-center items-center flex-col gap-4">
+                 <img src="./images/job-logo-1.png.svg" alt="first-job-logo"> 
+               <h3 class="dark:text-slate-50 text-defaultText font-poppins font-semibold text-xl">Database Programmer</h3>
+               <p class="text-mainBlue dark:text-mainPurple font-poppins font-normal text-base">Maximoz Team</p>
+               </div>
+               <div class="flex justify-center items-center flex-col gap-4 w-full">
+                   <div class="flex justify-center items-center gap-2">
+                    <img src="./images/Item → SVG.svg" alt="checkmark">
+                    <p class="font-poppins text-[15px] font-medium text-center text-defaultText dark:text-slate-50">Lorem ipsum dolor sit amet </p>
+                   </div>
+                   <div class="flex justify-center items-center gap-2">
+                    <img src="./images/Item → SVG.svg" alt="checkmark">
+                    <p class="font-poppins text-[15px] font-medium text-center text-defaultText dark:text-slate-50">Lorem ipsum dolor sit amet </p>
+                   </div>
+                   <div class="flex justify-center items-center gap-2">
+                    <img src="./images/Item → SVG.svg" alt="checkmark">
+                    <p class="font-poppins text-[15px] font-medium text-center text-defaultText dark:text-slate-50">Lorem ipsum dolor sit amet </p>
+                   </div>
+               </div>
+               <div class="flex justify-center items-center flex-row w-full gap-4">
+                 <button type="button" class="text-slate-50 rounded-full bg-mainBlue py-2 px-8 flex justify-center items-center dark:bg-mainPurple font-poppins text-base font-medium w-full">Apply Now</button>
+               </div>
+             </div>
+             </div>
+         </section>
     </main>
     <footer class="bg-footer pt-12 mt-16 flex justify-center items-center flex-col gap-8">
       <div class="flex w-[100%] justify-center items-center ffff:px-16 px-8 ff:flex-row flex-col gap-4">
