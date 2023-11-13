@@ -20,6 +20,9 @@ Welcome to People Per Task, your go-to destination for freelance talent! Our Git
 
 ![App Footer](https://i.imgur.com/BlWPQtL.png)
 
+![App SignUp](https://i.imgur.com/ZtbSJCI.png)
+
+![App SignIn](https://i.imgur.com/jk1Djnk.png)
 
 ## 🚀 Code Hooligans
 
@@ -42,7 +45,7 @@ Front End Engineer
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
   <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="40" alt="tailwindcss logo"  />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" height="40" alt="tailwindcss logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="40" alt="figma logo"  />
   <img width="12" />
