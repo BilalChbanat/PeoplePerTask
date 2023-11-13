@@ -20,7 +20,9 @@ module.exports = {
         'fs': "1003px",
         'ft': "860px",
         'fff': "688px",
-        'ffff': "816px"
+        'ffff': "816px",
+        'tablet': { 'max': '980px' }, 
+        'mobile': { 'max': '760px' }
       },
       colors: {
         cardGrey: '#161E2D',
