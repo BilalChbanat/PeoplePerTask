@@ -21,7 +21,9 @@ module.exports = {
         'fs': "1003px",
         'ft': "860px",
         'fff': "688px",
-        'ffff': "816px"
+        'ffff': "816px",
+        'tablet': { 'max': '980px' }, 
+        'mobile': { 'max': '760px' }
       },
       colors: {
         mainColorDark: "#111827",
@@ -38,6 +40,9 @@ module.exports = {
         nameTitleColor: '#9F7AEA',
         darkGrey: '#A9A9A9',
         seperator: '#3F444E',
+        darkGrey: '#A9A9A9',
+        seperator: '#3F444E',
+        AddB : '#ff8412',
         howitworks1: '#F4E9FD',
         howitworks2: '#F4E9FD',
         howitworks3: '#ECFAF0',
@@ -49,7 +54,9 @@ module.exports = {
       width: {
         'ss': '69vw',
       },
-
+      spacing: {
+        'apply': '-11rem',
+      },
 
       boxShadow: {
         'shadowBox': '5px 5px 25px rgba(1 1 1 / 20%);',
@@ -63,9 +70,11 @@ module.exports = {
       backgroundImage: {
         'body-bg': "url('../images/bg.png')",
         'company': "url('./images/bg-svg.svg')",
+        'apply-d': "url('../images/apply_pic.svg')",
       }
     },
   },
   plugins: [],
+
 }
 
