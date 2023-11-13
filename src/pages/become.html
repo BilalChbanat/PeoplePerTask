@@ -4,24 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dist/output.css">
-    <title>PeoplePerTask</title>
+    <link rel="stylesheet" href="../../dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="../../dist/sandbox.js"></script>
+    <title>PeoplePerTask</title>
 </head>
 
-<body class="bg-slate-50 dark:bg-mainColorDark" >
-    <header class="dark:bg-mainColorDark bg-slate-50">
+<body class="bg-slate-50 dark:bg-mainColorDark">
+    <header>
         <nav class="h-20 flex hf:dark:border-b-[1px] hf:border-b-seperator">
-            <ul class="flex px-16 justify-between items-center w-full">
+            <ul class="flex px-16 herothird:px-8 justify-between items-center w-full">
                 <li class="flex gap-1">
-                    <img src="../images/main-logo.svg" alt="main-logo">
-                    <div class="hidden ht:flex hf:hidden burgerMenu">
-                        <img src="../images/burger-menu-light.svg" alt="burger-menu-light" id="burger-menu-light"
+                    <img src="../../images/main-logo.svg" alt="main-logo">
+                    <div class="hf:hidden hl:hidden flex burgerMenu">
+                        <img src="../../images/burger-menu-light.svg" alt="burger-menu-light" id="burger-menu-light"
                             class="cursor-pointer">
-                        <img src="../images/burger-menu-dark.svg" alt="burger-menu-dark" id="burger-menu-dark"
+                        <img src="../../images/burger-menu-dark.svg" alt="burger-menu-dark" id="burger-menu-dark"
                             class="cursor-pointer">
                     </div>
                 </li>
@@ -32,7 +35,8 @@
                         </li>
                         <li><a href="#"
                                 class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">Become
-                                a member</a></li>
+                                a
+                                member</a></li>
                         <li><a href="#"
                                 class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">About
                                 Us</a></li>
@@ -46,10 +50,10 @@
                         <li>
                             <form class="relative hs:flex hidden">
                                 <input type="text" class="shadow-[0px_4px_16px_0px_#00000014] placeholder:text-[#818181]
-               dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none"
+                      dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none"
                                     placeholder="Search Here...">
                                 <button type="submit" class="absolute z-10 top-[10px] right-5"><img
-                                        src="../images/search-icon.svg" alt="search-icon"></button>
+                                        src="../../images/search-icon.svg" alt="search-icon"></button>
                             </form>
                         </li>
                         <li class="hidden ht:flex justify-center items-center gap-3 flex-row">
@@ -62,16 +66,16 @@
                         </li>
                         <li>
                             <div class="flex ht:hidden burgerMenu">
-                                <img src="../images/burger-menu-light.svg" alt="burger-menu-light"
+                                <img src="../../images/burger-menu-light.svg" alt="burger-menu-light"
                                     id="burger-menu-light" class="cursor-pointer">
-                                <img src="../images/burger-menu-dark.svg" alt="burger-menu-dark" id="burger-menu-dark"
-                                    class="cursor-pointer">
+                                <img src="../../images/burger-menu-dark.svg" alt="burger-menu-dark"
+                                    id="burger-menu-dark" class="cursor-pointer">
                             </div>
                         </li>
                         <li>
                             <div id="theme-switcher" class="relative">
                                 <div id="selectThemeDropdown"
-                                    class="transform translate-y-3 hidden right-[-50px] min-w-[11rem] top-[2.5rem] mt-2 z-10 opacity-0 transition duration-200 mb-2 origin-bottom-left bg-white shadow-md rounded-lg p-2 space-y-1 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 absolute">
+                                    class="transform translate-y-3 hidden herothird:right-[-18px] right-[-50px] min-w-[11rem] top-[2.5rem] mt-2 z-10 opacity-0 transition duration-200 mb-2 origin-bottom-left bg-white shadow-md rounded-lg p-2 space-y-1 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 absolute">
                                     <a
                                         class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer">
                                         Auto (system default)
@@ -116,7 +120,8 @@
                         </li>
                         <li><a href="#"
                                 class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">Become
-                                a member</a></li>
+                                a
+                                member</a></li>
                         <li><a href="#"
                                 class="dark:text-slate-50 text-defaultText font-poppins font-normal text-base py-4">About
                                 Us</a></li>
@@ -133,7 +138,7 @@
                                     class="shadow-[0px_4px_16px_0px_#00000014] placeholder:text-[#818181] dark:shadow-none bg-slate-50 rounded-full py-2 pl-6 pr-12 w-[18rem] border-none outline-none"
                                     placeholder="Search Here...">
                                 <button type="submit" class="absolute z-10 top-[10px] right-5"><img
-                                        src="../images/search-icon.svg" alt="search-icon"></button>
+                                        src="../../images/search-icon.svg" alt="search-icon"></button>
                             </form>
                         </li>
                         <li class="flex ht:hidden justify-center items-center gap-3 flex-col">
@@ -145,23 +150,6 @@
                                 Up</button>
                         </li>
                         <li>
-                            <div id="theme-switcher" class="relative">
-                                <div id="selectThemeDropdown"
-                                    class="transform translate-y-3 hidden right-[-50px] min-w-[11rem] top-[2.5rem] mt-2 z-10 opacity-0 transition duration-200 mb-2 origin-bottom-left bg-white shadow-md rounded-lg p-2 space-y-1 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 absolute">
-                                    <a
-                                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer">
-                                        Auto (system default)
-                                    </a>
-                                    <a
-                                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer">
-                                        Default (light mode)
-                                    </a>
-                                    <a
-                                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer">
-                                        Dark
-                                    </a>
-                                </div>
-                            </div>
                             <button id="theme-toggle" type="button"
                                 class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
                                 <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor"
@@ -185,44 +173,59 @@
     <main>
         <section class="flex flex-row justify-center items-center p-10 ">
             <div class="w-[47%] flex flex-col justify-start space-y-5">
-                <div >
-                    <h1 class="font-poppins font-semibold text-defaultText text-[3.6rem] mobile:text-[1.6rem] dark:text-slate-50">Find your <span class="text-mainBlue dark:text-mainPurple">dream</span> jobs through <span class="text-mainBlue dark:text-mainPurple">PeoplePerTask</span> easily </h1>
+                <div>
+                    <h1
+                        class="font-poppins font-semibold text-defaultText text-[3.6rem] mobile:text-[1.6rem] dark:text-slate-50">
+                        Find your <span class="text-mainBlue dark:text-mainPurple">dream</span> jobs through <span
+                            class="text-mainBlue dark:text-mainPurple">PeoplePerTask</span> easily </h1>
                 </div>
                 <form class="flex relative justify-center items-center">
-                    <input type="search" name="search" id="search" class="w-[43rem] h-[3.7rem] p-6 outline-none shadow-[0px_1px_20px_0px_#00000014] rounded-full placeholder:text-[#818181]" placeholder="Search here..." >
-                    <button class="absolute w-[8rem] h-[3rem] right-[0.41rem] bg-mainBlue p-2 text-slate-50 font-poppins rounded-full flex justify-center items-center dark:bg-mainPurple">Search Job</button>
+                    <input type="search" name="search" id="search"
+                        class="w-[43rem] h-[3.7rem] p-6 outline-none shadow-[0px_1px_20px_0px_#00000014] rounded-full placeholder:text-[#818181]"
+                        placeholder="Search here...">
+                    <button
+                        class="absolute w-[8rem] h-[3rem] right-[0.41rem] bg-mainBlue p-2 text-slate-50 font-poppins rounded-full flex justify-center items-center dark:bg-mainPurple">Search
+                        Job</button>
                 </form>
                 <div class="">
-                    <buttom class="p-[0.5rem] px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
+                    <buttom
+                        class="p-[0.5rem] px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
                         <a href="#">Web Dev</a>
                     </buttom>
-                    <buttom class="p-[0.5rem] ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
+                    <buttom
+                        class="p-[0.5rem] ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
                         <a href="#">Mobile Dev</a>
                     </buttom>
-                    <buttom class="p-[0.5rem] ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
+                    <buttom
+                        class="p-[0.5rem] ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
                         <a href="#">Design</a>
                     </buttom>
-                    <buttom class="p-[0.5rem] ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
+                    <buttom
+                        class="p-[0.5rem] ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
                         <a href="#">Writing</a>
                     </buttom>
-                    <buttom class="p-[0.5rem] ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
+                    <buttom
+                        class="p-[0.5rem] ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
                         <a href="#">Admin Support</a>
                     </buttom>
                     <div class="mt-5">
-                        <buttom class="p-[0.5rem] mt-3 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
+                        <buttom
+                            class="p-[0.5rem] mt-3 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
                             <a href="#">Customer Service</a>
                         </buttom>
-                        <buttom class="p-[0.5rem] mt-3 ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
+                        <buttom
+                            class="p-[0.5rem] mt-3 ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
                             <a href="#">Accounting</a>
                         </buttom>
-                        <buttom class="p-[0.5rem] ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
+                        <buttom
+                            class="p-[0.5rem] ml-2 px-4 border-gray-200 text-defaultText dark:text-slate-50 font-semibold tracking-wider text-[14px] rounded-full font-poppins border-2 hover:bg-mainBlue dark:hover:bg-mainPurple hover:text-slate-50 hover:border-none">
                             <a href="#">View all categories</a>
                         </buttom>
                     </div>
                 </div>
             </div>
             <div class="w-[47%]">
-                <img src="../images/Main → heroImage.svg" alt="">
+                <img src="../../images/Main → heroImage.svg" alt="">
             </div>
         </section>
 
@@ -232,19 +235,24 @@
             </div>
             <div>
                 <div>
-                    <input
-                       class="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
-                       type="checkbox"
-                       role="switch"
-                       id="flexSwitchCheckDefault" />
-                     <label class="inline-block pl-[0.15rem] hover:cursor-pointer" for="flexSwitchCheckDefault"></label> 
+                    <label class="relative inline-flex cursor-pointer items-center">
+                        <input id="switch-2" type="checkbox" class="peer sr-only" />
+                        <label for="switch-2" class="hidden"></label>
+                        <div class="peer h-4 w-11 rounded-full border bg-slate-200 after:absolute after:-top-1 after:left-0 after:h-6 after:w-6 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-mainBlue peer-checked:after:translate-x-full peer-focus:ring-mainBlue"></div>
+                    </label>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+        </section>
+        <section class="py-12 flex justify-around items-start flex-wrap">
+            <img src="../../images/company1.svg" alt="company1">
+            <img src="../../images/company2.svg" alt="company2">
+            <img src="../../images/company3.svg" alt="company3">
+            <img src="../../images/company4.svg" alt="company4">
+            <img src="../../images/company5.svg" alt="company5">
         </section>
     </main>
 
