@@ -64,6 +64,7 @@ module.exports = {
 
       backgroundImage: {
         'body-bg': "url('../images/bg.png')",
+        'company': "url('./images/bg-svg.svg')",
         'apply-d': "url('../images/apply_pic.svg')",
       }
     },
