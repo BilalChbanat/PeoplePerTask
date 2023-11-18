@@ -103,7 +103,9 @@ npm install
 npm start
 ```
 
-6. why are you still reading this, get to work you lazy cookie
+6. start the dev server using vscode's live server extension
+
+7. why are you still reading this, get to work you lazy cookie
 
 
 
