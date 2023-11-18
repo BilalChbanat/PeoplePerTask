@@ -72,7 +72,7 @@ Front End Engineer
 
 You can check the Jira tasks and workflow here:
 
-![Jira Board](https://nonesite.atlassian.net/jira/software/projects/PW/boards/3)
+[Jira Board](https://nonesite.atlassian.net/jira/software/projects/PW/boards/3)
     
 ## How to contribute to this codebase (by yours trully yassir elk)
 
