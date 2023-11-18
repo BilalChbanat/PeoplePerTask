@@ -68,14 +68,11 @@ Front End Engineer
 ###
 
 
-## Installation
+## Jira Tasks
 
-Install my-project with npm
+You can check the Jira tasks and workflow here:
 
-```bash
-  npm install my-project
-  cd my-project
-```
+![Jira Board](https://nonesite.atlassian.net/jira/software/projects/PW/boards/3)
     
 ## How to contribute to this codebase (by yours trully yassir elk)
 
