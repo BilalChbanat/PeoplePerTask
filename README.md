@@ -73,7 +73,15 @@ Front End Engineer
 You can check the Jira tasks and workflow here:
 
 [Jira Board](https://nonesite.atlassian.net/jira/software/projects/PW/boards/3)
-    
+
+## Live Demo
+
+You can check out the live demo here:
+
+[Demo](https://bilalchbanat.github.io/PeoplePerTask/)
+
+Note: This version is only for demonstration perposes and is not production-ready nor is it optimized for live-use.
+
 ## How to contribute to this codebase (by yours trully yassir elk)
 
 1. fork the remote repository
@@ -103,6 +111,11 @@ npm start
 6. start the dev server using vscode's live server extension
 
 7. why are you still reading this, get to work you lazy cookie
+
+### Maintainer 
+
+- This Readme is being maintained by [Yassir Elkhaili](https://github.com/yassirelkhaili)
+- Email: [elkhailiyassir@gmail.com](mailto:elkhailiyassir@gmail.com)
 
 
 
