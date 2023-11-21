@@ -1,0 +1,17 @@
+{
+    "name": "youcode/backend",
+    "description": "PeoplePerTask Backend",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Youcode\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yassir Elkhaili",
+            "email": "elkhailiyassir@gmail.com"
+        }
+    ],
+    "require": {}
+}
