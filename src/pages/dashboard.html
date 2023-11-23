@@ -169,57 +169,111 @@
         </div>
     </nav>
         </div>
-        <table id="table_id" class="display">
+        <table id="table_id" class="display" style="width: 100%;">
             <thead>
                 <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>PhoneNumber</th>
+                    <th>Dob</th>
+                    <th>City</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Row 1 Data 1</td>
-                    <td>Row 1 Data 2</td>
-                </tr>
-                <tr>
-                    <td>Row 2 Data 1</td>
-                    <td>Row 2 Data 2</td>
-                </tr>
-            </tbody>
         </table>
     </main>
 </section>
 <footer>
-   <script>
-    const dataTable = document.querySelector("#table_id");
-  const fetchUsers = async() => {
-    try {
-      const response = await fetch("http://localhost/users.php", {
-          method: "GET",
-      });
-      if (response.ok) {
-          const responseData = await response.json();
-         return responseData.content;
-      }
-      else {
-          console.error("there was an error: " + response);
-      }
-  }
-  catch (error) {
-      throw new Error("an error has occured " + error);
-  }
-}
-  fetchUsers().then((responseData) => {
-    let table = new DataTable('#table_id', {
-        responsive: true,
-        data: responseData,
-        columns: [
-            { data: 'name' },
-            { data: 'position' },
-        ]
+    <script>
+    /** 
+    * @author Yassir Elkhaili
+    * @license MIT
+    */
+
+    //fetch users
+    const fetchUsers = async () => {
+  try {
+    const response = await fetch("http://localhost/users.php", {
+      method: "GET",
     });
-  }).catch((error) => console.error(error));
-   </script>
+    if (response.ok) {
+      const responseData = await response.json();
+      return responseData;
+    } else {
+      console.error("there was an error: " + response);
+    }
+  } catch (error) {
+    throw new Error("an error has occurred " + error);
+  }
+};
+
+const deleteUser = async (id) => {
+  try {
+    const response = await fetch(`http://localhost/users.php?id=${id}`, {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      const responseData = await response.json();
+      return responseData;
+    } else {
+      console.error("there was an error: " + response.statusText);
+    }
+  } catch (error) {
+    throw new Error("an error has occurred " + error);
+  }
+};
+
+
+const initializeTable = (data) => {
+  const table = new DataTable("#table_id", {
+    data: data,
+    columns: [
+      { data: "userID" },
+      { data: "username" },
+      { data: "passwordHash" },
+      { data: "email" },
+      { data: "phoneNumber" },
+      { data: "dob" },
+      { data: "city" },
+      {
+        data: null,
+        defaultContent:
+          '<div class="flex gap-2"><button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Edit</button><button type="button" class="focus:outline-none text-white bg-[#FE8D4D] hover:bg-[#F18040] focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-[#F18040] deleteButton">Delete</button></div>',
+      },
+    ],
+  });
+
+  const deleteButtons = document.querySelectorAll(".deleteButton");
+
+  const handleDeleteButtonClick = async(event) => {
+    const id =
+        event.target.parentElement.parentElement.parentElement.firstChild
+          .textContent;
+      await deleteUser(id);
+      const updatedData = await fetchUsers();
+      table.clear();
+      table.rows.add(updatedData.content).draw();
+      const deleteButtons = document.querySelectorAll(".deleteButton");
+      deleteButtons.forEach((deleteButton) => deleteButton.addEventListener("click", handleDeleteButtonClick));
+}
+  deleteButtons.forEach((deleteButton) => deleteButton.addEventListener("click", handleDeleteButtonClick));
+};
+
+const updateTable = async () => {
+  try {
+    const responseData = await fetchUsers();
+    initializeTable(responseData.content);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const dataTable = document.querySelector("#table_id");
+updateTable();
+    </script>
 </footer>
 </body>
 </html>
