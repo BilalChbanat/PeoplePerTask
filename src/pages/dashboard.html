@@ -134,19 +134,19 @@
                   <div class="flex justify-center items-start gap-2 w-[100%]">
                 <div>
                   <label for="username"></label>
-                  <input type="text" id="username" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple" placeholder="Username">
+                  <input type="text" id="username" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="Username">
                 </div>
                   <div>
                     <label for="phone"></label>
-                  <input type="text" id="phone" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple" placeholder="Phone">
+                  <input type="text" id="phone" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="Phone">
                   </div>
                   </div>
                   <label for="email"></label>
-                  <input type="text" id="email" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple" placeholder="Email">
+                  <input type="text" id="email" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="Email">
                   <label for="dob"></label>
-                  <input type="text" id="dob" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple" placeholder="Date of birth">
+                  <input type="text" id="dob" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="Date of birth">
                   <label for="city"></label>
-                  <input type="text" id="city" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple" placeholder="City">
+                  <input type="text" id="city" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="City">
                 </form>
               </div>
               <div class="modal__buttons flex justify-end gap-2 items-center text-base">
@@ -228,9 +228,9 @@
     */
 
     //fetch users
-    const fetchUsers = async () => {
-  try {
-    const response = await fetch("http://localhost/users.php", {
+  const fetchUsers = async () => {
+    try {
+      const response = await fetch("http://localhost/users.php", {
       method: "GET",
     });
     if (response.ok) {
@@ -274,7 +274,7 @@ const initializeTable = (data) => {
       {
         data: null,
         defaultContent:
-          '<div class="flex gap-2"><button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 addUser">Edit</button><button type="button" class="focus:outline-none text-white bg-[#FE8D4D] hover:bg-[#F18040] focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-[#F18040] deleteButton">Delete</button></div>',
+          '<div class="flex gap-2"><button type="button" class="focus:outline-none text-white dark:bg-purple-700 bg-blue-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 addUser">Edit</button><button type="button" class="focus:outline-none text-white bg-[#FE8D4D] hover:bg-[#F18040] focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-[#F18040] deleteButton">Delete</button></div>',
       },
     ],
   });
@@ -335,6 +335,15 @@ let searchModalIsOpen = false;
 
 const handleModalTrigger = (event) => {
   const target = event.target
+  const content = target.closest('tr').childNodes;
+const editUserForm = document.querySelector("#editUserForm");
+const inputs = editUserForm.querySelectorAll("input");
+let i = content.length - 3;
+while (i >= 0) {
+  if (i === 2) [content[i].textContent, content[i + 1].textContent] = [content[i + 1].textContent, content[i].textContent];
+  inputs[i].value = content[i + 1].textContent
+  i--;
+}
   modal.classList.add("-translate-x-2/4", "transform", "translate-y-[-18rem]", "opacity-[100]");
   obscure.classList.add('fixed', 'flex', 'justify-center', 'items-center', 'h-screen', 'w-screen', 'bg-[rgba(0,0,0,0.5)]', 'opacity-[50]', 'z-[5]', 'transition-[0.3s]', 'duration-[ease-in-out]', 'left-0', 'top-0');
   document.body.style.overflow = "hidden";

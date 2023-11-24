@@ -1439,6 +1439,11 @@ video {
   background-color: rgba(0,0,0,0.5);
 }
 
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
 .bg-footer {
   --tw-bg-opacity: 1;
   background-color: rgb(31 33 49 / var(--tw-bg-opacity));
@@ -2545,6 +2550,11 @@ video {
 :is(.dark .dark\:bg-purple-600) {
   --tw-bg-opacity: 1;
   background-color: rgb(147 51 234 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-purple-700) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
 
 :is(.dark .dark\:bg-slate-50) {
