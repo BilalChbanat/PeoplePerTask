@@ -147,12 +147,12 @@
                   <input type="text" id="sub_categoryID" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="sub_category" name="sub_categoryID">
                   <label for="userID"></label>
                   <input type="text" id="userID" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="userID" name="userID">
-                  <div class="modal__buttons flex justify-end gap-2 items-center text-base">
-                <button type="submit" class="modal__button__footer__close dark:bg-mainPurple bg-mainBlue text-white cursor-pointer px-4 py-[0.7rem] rounded-[5px] border-none submitChange">
+                </form>
+              </div>
+              <div class="modal__buttons flex justify-end gap-2 items-center text-base">
+                <button type="button" class="modal__button__footer__close dark:bg-mainPurple bg-mainBlue text-white cursor-pointer px-4 py-[0.7rem] rounded-[5px] border-none submitChange">
                   Submit
                 </button>
-              </div>
-                </form>
               </div>
             </div>
           </div>
@@ -174,21 +174,21 @@
                 </div>
                   <div>
                     <label for="description"></label>
-                  <input type="text" id="descripton" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="Description" name="projectDesc">
+                  <input type="text" id="descripton" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="Description" name="categoryID">
                   </div>
                   </div>
                   <label for="categoryID"></label>
-                  <input type="text" id="categoryID" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="category" name="categoryID">
+                  <input type="text" id="categoryID" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="category" name="projectDesc">
                   <label for="sub_categoryID"></label>
                   <input type="text" id="sub_categoryID" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="sub_category" name="sub_categoryID">
                   <label for="userID"></label>
                   <input type="text" id="userID" class="flex w-[100%] py-3 border-gray-300 border-2 rounded-lg px-3 focus:outline-none focus:border-mainBlue dark:focus:border-mainPurple text-defaultText" placeholder="userID" name="userID">
-                  <div class="modal__buttons flex justify-end gap-2 items-center text-base">
-                    <button type="submit" class="modal__button__footer__close__create dark:bg-mainPurple bg-mainBlue text-white cursor-pointer px-4 py-[0.7rem] rounded-[5px] border-none submitChangeCreate">
-                      Submit
-                    </button>
-                  </div>
                 </form>
+              </div>
+              <div class="modal__buttons flex justify-end gap-2 items-center text-base">
+                <button type="button" class="modal__button__footer__close__create dark:bg-mainPurple bg-mainBlue text-white cursor-pointer px-4 py-[0.7rem] rounded-[5px] border-none submitChangeCreate">
+                  Submit
+                </button>
               </div>
             </div>
           </div>
@@ -300,22 +300,6 @@ const deleteProject = async (id) => {
 
 let table;
 
-const handleDeleteButtonClick = async(event) => {
-    const id =
-        event.target.parentElement.parentElement.parentElement.firstChild
-          .textContent;
-      await deleteProject(id);
-      const updatedData = await fetchProjects();
-      table.clear();
-      table.rows.add(updatedData.content).draw();
-      const deleteButtons = document.querySelectorAll(".deleteButton");
-      deleteButtons.forEach((deleteButton) => deleteButton.addEventListener("click", handleDeleteButtonClick));
-      const editButtons = document.querySelectorAll(".editUser");
-      modal && editButtons.forEach(editUserButton => {
-    editUserButton.addEventListener("click", handleModalTrigger)
-  });
-}
-
 const initializeTable = (data) => {
     table = new DataTable("#table_id", {
     data: data,
@@ -337,6 +321,21 @@ const initializeTable = (data) => {
   const deleteButtons = document.querySelectorAll(".deleteButton");
   const editButtons = document.querySelectorAll(".editUser");
 
+  const handleDeleteButtonClick = async(event) => {
+    const id =
+        event.target.parentElement.parentElement.parentElement.firstChild
+          .textContent;
+      await deleteProject(id);
+      const updatedData = await fetchProjects();
+      table.clear();
+      table.rows.add(updatedData.content).draw();
+      const deleteButtons = document.querySelectorAll(".deleteButton");
+      deleteButtons.forEach((deleteButton) => deleteButton.addEventListener("click", handleDeleteButtonClick));
+      const editButtons = document.querySelectorAll(".editUser");
+      modal && editButtons.forEach(editUserButton => {
+    editUserButton.addEventListener("click", handleModalTrigger)
+  });
+}
   deleteButtons.forEach((deleteButton) => deleteButton.addEventListener("click", handleDeleteButtonClick));
   modal && editButtons.forEach(editUserButton => {
     editUserButton.addEventListener("click", handleModalTrigger)
@@ -379,9 +378,6 @@ let searchModalIsOpen = false;
 const editUserForm = document.querySelector("#editUserForm");
 const postUserForm = document.querySelector("#postUserForm");
 
-editUserForm.addEventListener("submit", (event) => event.preventDefault());
-postUserForm.addEventListener("submit", (event) => event.preventDefault());
-
 const updateData = async(id) => {
     const formData = new FormData(editUserForm);
       const jsonData = {};
@@ -413,11 +409,6 @@ const handleEditSubmitEvent = async (id) => {
   const updatedData = await fetchProjects();
   table.clear();
   table.rows.add(updatedData.content).draw();
-  const deleteButtons = document.querySelectorAll(".deleteButton");
-  const editButtons = document.querySelectorAll(".editUser");
-  modal && editButtons.forEach(editUserButton => {
-    editUserButton.addEventListener("click", handleModalTrigger)})
-    deleteButtons.forEach((deleteButton) => deleteButton.addEventListener("click", handleDeleteButtonClick));
 }
 
 const postData = async() => {
@@ -451,12 +442,6 @@ const handlePostSubmitEvent = async () => {
   const updatedData = await fetchProjects();
   table.clear();
   table.rows.add(updatedData.content).draw();
-  const deleteButtons = document.querySelectorAll(".deleteButton");
-  const editButtons = document.querySelectorAll(".editUser");
-  deleteButtons.forEach((deleteButton) => deleteButton.addEventListener("click", handleDeleteButtonClick));
-  modalCreate && editButtons.forEach(editUserButton => {
-    editUserButton.addEventListener("click", handleModalTrigger)
-  });
 }
 
 const handleModalTrigger = (event) => {
