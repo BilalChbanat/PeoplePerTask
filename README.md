@@ -21,9 +21,8 @@ Welcome to People Per Task, your go-to destination for freelance talent! Our Git
 
 ## Screenshots
 
-![App Header](https://i.imgur.com/VShjZ98.png)
+![App Header]([https://i.imgur.com/VShjZ98.png](https://github.com/BilalChbanat/PeoplePerTask/assets/117037147/53ed22de-f7a9-4640-89b5-42038840b578))
 
-![App Footer](https://i.imgur.com/BlWPQtL.png)
 
 ![App SignUp](https://i.imgur.com/ZtbSJCI.png)
 
